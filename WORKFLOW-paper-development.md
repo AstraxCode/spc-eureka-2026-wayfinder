@@ -67,13 +67,18 @@ So: never jump from the map straight to writing the paper.
   the two HITL decisions — sender-ESP32 and title; the nine mandatory sections; assemble+review).
   Blocking edges wired as text; frontier = **08, 09, 10, 12, 19**. On branch
   `to-tickets/paper-draft-2026-10-16`, **PR #2 open** (not merged — user decides).
-- **Drafting tickets resolved: 08** (GLOSSARY + domain wiring) **and 09** (sender-side ESP32
+- **Drafting tickets resolved: 08** (GLOSSARY + domain wiring), **09** (sender-side ESP32
   **KEPT**; the "sender ESP32 removed" cost claim **retracted** — ticket 06 amendment 3, ADR 0002
-  amendment 2). Committed chain: PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos. Frontier now **10, 11, 12, 19** (11 unblocked by 08).
-- `map.md` is still **`Status: open`**: the title is the one decision not made. That is deliberate —
-  the map is not done while a decision is open, even though the effort is authorised to proceed.
-- GitHub mirror synced, `HEAD == origin/main` at `e596a50`. Issue #1 open, 1 comment.
-- Backups: `.scratch/_backups/spc-full-paper-20261016-1640/` (pre-ticket-04-close).
+  amendment 2), **and 10** (final title; 16 Oct). Committed chain: PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos.
+- **Ticket 10 closed the title (16 Oct).** The title is held in exactly one place,
+  `.scratch/spc-full-paper/title.md` (`TITLE_INTERNAL` = working form with the `-archonx` suffix;
+  `TITLE_SUBMISSION` = cover-page form without it — user decision). GitHub Issue #1 is **closed**, and
+  `map.md` is now **`Status: closed`** — no decision is left open. Side effect: `GLOSSARY.md`'s
+  fine-mode Indonesian term aligned to *mode posisi-halus*. Frontier now **11, 12, 19** (11 unblocked
+  by 08; 17 is unblocked by 10).
+- GitHub mirror: `main` at `e596a50`; drafting branches `ticket-08` … `ticket-10` stacked on the
+  unmerged `to-tickets/paper-draft-2026-10-16` (PR #2).
+- Backups: `.scratch/_backups/spc-full-paper-20261016-2147/` (pre-ticket-10-close).
 
 ---
 
@@ -233,8 +238,9 @@ collapse you already have.
 
 ## Blockers (both already in the map + spec)
 
-1. **The title.** Provisional. Blocks `Halaman Sampul`. Live as GitHub Issue #1, open on purpose so
-   a teammate can propose.
+1. ~~**The title.**~~ — **DONE 16 Oct 2026 (ticket 10).** The title is locked and stored in
+   `.scratch/spc-full-paper/title.md`; GitHub Issue #1 is closed and `map.md` is `Status: closed`.
+   `Halaman Sampul` (ticket 17) is unblocked.
 2. ~~**Sender-side ESP32, kept or removed.**~~ — **DONE 16 Oct (ticket 09).** The sender-side
    ESP32 is **KEPT**: it is the master MCU that reads the PS2 controller (PS2X). Ticket 06's
    "sender ESP32 removed" cost saving is **retracted** (ticket 06 amendment 3; ADR 0002 amendment
@@ -267,8 +273,9 @@ carrying that label, or after a real listing link is captured.
 
 1. Read `.scratch/spc-full-paper/map.md` first — the low-res view of every decision.
 2. Read `.scratch/spc-full-paper/spec.md` for the collapsed plan.
-3. `to-tickets` **done** — 13 tickets `issues/08..20` published (PR #2, awaiting merge). **08 and
-   09 resolved 16 Oct**; work the frontier **10, 11, 12, 19** blockers-first (11 unblocked by 08).
+3. `to-tickets` **done** — 13 tickets `issues/08..20` published (PR #2, awaiting merge). **08, 09 and
+   10 resolved 16 Oct** (the title is settled and the map is closed); work the frontier **11, 12, 19**
+   blockers-first (11 unblocked by 08; 17 unblocked by 10).
 4. Work tickets blockers-first with `implement`, each in a fresh context, grounded by the claim
    ledger.
 5. Re-sync the GitHub mirror after every session that edits the tracker.
@@ -276,3 +283,8 @@ carrying that label, or after a real listing link is captured.
 **Upstream source:** `mattpocock/skills` v1.3.1 @ `49dd158`, archived at
 `AI bank/Skills Library/imported skills/mattpocock-skills`; installed into the Hermes `archonx`
 profile on 16 Oct 2026.
+
+## Related
+
+- **Hub:** [[Dingle's research/SPC Eureka 2026/SPC Eureka 2026 MOC|SPC Eureka 2026 MOC]]
+- **Nearby:** [[Dingle's research/SPC Eureka 2026/claim-ledger-archonx|claim-ledger-archonx]], [[Dingle's research/SPC Eureka 2026/docs/agents/domain|domain]], [[Dingle's research/SPC Eureka 2026/docs/agents/issue-tracker|issue-tracker]]

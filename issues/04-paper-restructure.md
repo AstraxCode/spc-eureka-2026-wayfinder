@@ -54,6 +54,13 @@ ESTIMATE (verified live sweep 15 Oct: wireless >= Rp85k). The paper may use this
 labelled as team estimate, or with a captured listing link. Map updated; the stale Blynk
 re-decision fog item cleared. REMAINING OPEN in this ticket: final title only.
 
+**2026-10-16 (AMENDMENT, ticket 10 — final title SETTLED):** the title is no longer open. Ticket 10
+locked it and holds it in a single source, `.scratch/spc-full-paper/title.md` (`TITLE_INTERNAL` /
+`TITLE_SUBMISSION`): Indonesian, solution-framed, stik PS2 + mode posisi-halus, with the
+radioactive-material background clause kept; the internal form carries the `-archonx` suffix and the
+submitted cover title drops it (user decision). This closes the last open item in this ticket and on
+the wayfinder map. No section-plan decision above changes.
+
 **2026-10-15 (AMENDMENT, PS2-controller pivot — written into this ticket 2026-10-16):**
 The PS2-controller decision (recorded 15 Oct in tickets 06 and 02, and in the map's
 Decisions-so-far) invalidates the phone/web-joystick framing that the round-1/2 answers below
@@ -113,7 +120,8 @@ Settled across interview rounds 1-2 (15 Oct) plus the 15 Oct PS2 amendment above
 
 **Carried forward (not blockers for this ticket):**
 
-- Final title -> GitHub Issue #1 and the drafting stage.
+- Final title -> GitHub Issue #1 and the drafting stage. **CLOSED 16 Oct (ticket 10):** the title is
+  locked and stored in `.scratch/spc-full-paper/title.md`; GitHub Issue #1 closed with it.
 - ~~Sender-side ESP32 kept-or-removed -> ticket 06 amendment 2; must be settled before the
   Metodologi architecture and the Feasibility argument are written.~~ **SETTLED 16 Oct (ticket 09):
   the sender-side ESP32 is KEPT** — the master MCU that reads the PS2 controller. Ticket 06's
