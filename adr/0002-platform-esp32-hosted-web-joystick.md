@@ -33,3 +33,19 @@ in firmware (plain look, browser touch latency slightly higher than native).
 If the web joystick cannot meet the pre-registered latency target in in-team testing, the paper
 falls back to Blynk Cloud with latency reported as a measured, pre-registered target
 (claim-ledger convention), not a result.
+## Amendment 2026-10-15 (recorded 2026-10-16) — superseded as the primary interface
+
+The PS2-controller decision (tickets 06 and 02, same day) supersedes this ADR's **Decision**: the
+operator interface is a **PS2 controller** (analog stick + ABXY + trigger), not the ESP32-hosted
+web joystick. Status is now **superseded-as-primary, retained-as-fallback** — the ESP32-hosted web
+joystick remains the documented fallback if the PS2 path proves unworkable at build time, exactly
+the role Blynk Cloud plays in the Decision above.
+
+Surviving intent: cloud-free, app-free local control; an explicit fine-mode control; gain
+reduction + release-to-hold latch; zero per-operator install; the Blynk-Cloud fallback chain.
+
+NOT settled by this amendment: whether a **sender-side ESP32** is retained. The PS2 controller
+needs a master MCU to read it (PS2X library), so ticket 06's original "sender ESP32 removed" cost
+claim cannot hold as written. That re-decision belongs to ticket 06 and must land before the
+Metodologi architecture section is drafted.
+

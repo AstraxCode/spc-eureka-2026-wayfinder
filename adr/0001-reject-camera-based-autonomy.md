@@ -34,3 +34,9 @@ detection demo before the Final stage (28–29 Nov 2026); budget approval for ca
 - AMENDED 2026-10-15 (ticket 04 interview): the manual glove/IMU path is rejected outright per
   user decision — the paper's committed interface is digital control on a phone (ESP32-hosted web
   joystick per ADR 0002); glove/IMU appears nowhere as a committed or alternative interface.
+- AMENDED 2026-10-16 (recording the 2026-10-15 PS2 pivot): the "digital control on a phone /
+  ESP32-hosted web joystick" interface named in the amendment above is itself SUPERSEDED. The
+  committed input device is now a PS2 controller (ticket 06 amendment 2; ADR 0002 amendment).
+  The glove/IMU rejection stands — zero mentions in the paper. Camera autonomy remains the
+  future-work paragraph, and the human-teleoperation premise that keeps all three metrics alive
+  is unchanged.

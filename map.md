@@ -78,14 +78,15 @@ Settled during charting, before any ticket existed (no ticket carries these):
 - Admin ruling 14 Oct (via user): title edits ALLOWED; Pendahuluan + core problem LOCKED. Closes
   the title-change fog item; detail in ticket 01's answer section.
 - [Prior art](issues/05-prior-art.md): motion scaling + hybrid position/rate control well supported; NO direct evidence smoothing alone improves placement accuracy (treat as hypothesis); 2-s hold is project-defined, not a standard metric.
-- [Paper restructure](issues/04-paper-restructure.md) (in progress, interview 15 Oct): abstract
+- [Paper restructure](issues/04-paper-restructure.md) (RESOLVED 16 Oct): abstract
   reframed to solution (fine-positioning contribution, results labelled expectations); section plan
   accepted (Pendahuluan background verbatim, Dasar Teori rebuilt on motion scaling/hybrid
   position-rate control, Metodologi = architecture + intervention + 2x2); Hasil dan Pembahasan =
   expectations analysis + pre-registered targets + honest-limits subsection; eq (2) relabelled
   baseline coarse mapping + new fine-mode equation added, statistics eqs (4-6) kept; Tujuan list
   replaced with the three-item solution-framed version; expected results = pre-registered numeric
-  targets (latency <= 200 ms; placement error within one grid cell). REMAINING OPEN: final title.
+  targets (latency <= 200 ms; placement error within one grid cell). Title left TEMPORARY by user
+  decision (16 Oct) and carried to Issue #1 / drafting; user authorised proceeding past it.
 - Control input AMENDED 15 Oct (tickets 06 + 02): glove/IMU and analog physical joystick
   REJECTED (zero mentions in paper), then same day superseded by the user+team decision: committed
   input device is a **PS2 controller** — stick = coordinated multi-DOF rate control (end-effector
@@ -99,8 +100,10 @@ Settled during charting, before any ticket existed (no ticket carries these):
 
 ## Not yet specified
 
-- Final title of the paper — deferred by user (15 Oct); must be chosen before submission. All
-  other ticket-04 restructure decisions are settled (see Decisions so far).
+- Final title of the paper — STILL NOT CHOSEN. User confirmed 16 Oct that the working title stays
+  TEMPORARY and authorised the effort to proceed past it. Live on GitHub Issue #1; must be
+  finalised before submission. Every other ticket-04 restructure decision is settled (see
+  Decisions so far).
 - Verified wired-PS2 listing price: team estimate is Rp40k-70k (16 Oct); a real listing link
   should be captured before the figure enters the paper.
 
@@ -109,9 +112,10 @@ Settled during charting, before any ticket existed (no ticket carries these):
   photos, no firmware, no STL). The extended abstract states build steps in past tense — either
   build evidence lives outside these dirs (phone photos etc.) or the wording overstates. Only the
   team can settle this; HASIL DAN PEMBAHASAN wording depends on it.
-- Operator pool: how many operators, who, and whether operator-to-operator variation is in scope.
-- ~~Title change~~ RESOLVED by admin ruling 14 Oct: title edits allowed; Pendahuluan and the core
-  problem are locked. Repositioning happens in sections after Pendahuluan.
+- Sender-side ESP32 kept or removed under the PS2 scheme (ticket 06 amendment 2). A PS2
+  controller needs a master MCU to read it, so ticket 06's "sender ESP32 removed" cost claim
+  cannot stand as written; re-decide before the Metodologi architecture and Feasibility argument
+  are written.
 
 ## Out of scope
 
