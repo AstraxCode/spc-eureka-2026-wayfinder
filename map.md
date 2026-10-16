@@ -123,6 +123,15 @@ Settled during charting, before any ticket existed (no ticket carries these):
   the submitted cover title drops it (user decision). Closes the last open map item and GitHub Issue
   #1. Side effect: `GLOSSARY.md`'s Fine-mode Indonesian term aligned to *mode posisi-halus* (ticket 08
   amendment 1).
+- [Dasar Teori](issues/11-dasar-teori.md) (RESOLVED 16 Oct): the section is drafted at
+  `draft/11-dasar-teori-archonx.md` and rebuilt on the intervention's real prior art — motion scaling
+  (Richter 2019; Yoon 2025), hybrid position/rate control (Han & Yang 2022; Lee 2024, abstract-level),
+  and the filtering literature (Wang 2024) — with the honesty caveat stated outright: **no direct
+  evidence that command smoothing alone improves placement accuracy**, so smoothing is a hypothesis and
+  fine mode is not a filter. Ledger extended with S9–S13 / C14–C18 (the ticket-05 prior-art sources were
+  not yet in the gate). This establishes the drafting convention `draft/NN-<slug>-archonx.md`, and the
+  section owns eqs (1)–(3) (torque, coarse mapping, fine-mode gain reduction); the latency/statistics
+  equations renumber at tickets 13/14–20. This unblocks 13.
 
 ## Not yet specified
 
