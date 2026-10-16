@@ -20,7 +20,8 @@ mindmap-rencana-konsep.svg   ← same, vector; .mmd = editable Mermaid source
 map.md            ← the map: destination, notes, decisions-so-far, open items (START HERE)
 spec.md           ← the full-paper spec synthesised from the closed map (9 mandatory sections,
                     locked decisions, evidence rules, pre-submission checks) — read after map.md
-issues/           ← one file per decision ticket (question + answer + comments history)
+issues/           ← 01–07 = decision tickets (question + answer + comments history);
+                    08–20 = drafting tickets (to-tickets breakdown: What to build / Blocked by)
 adr/              ← architecture decision records (0001 camera autonomy, 0002 web joystick)
 research/         ← research-ticket findings (guidebook, prior art, Blynk sourcing)
 docs/             ← tracker conventions (issue-tracker.md) and domain notes
@@ -42,6 +43,9 @@ docs/             ← tracker conventions (issue-tracker.md) and domain notes
   (stick = multi-DOF rate control, ABXY = single joint, trigger = fine mode).
   Full rationale: ticket 06 amendments + `adr/0002-platform-esp32-hosted-web-joystick.md`
   (now a documented fallback) + `pitch-ps2-kontrol-dingleberry.md`.
+- **Drafting ticket set published (08–20)** — the `to-tickets` stage: 13 slices (glossary
+  prefactor, the two HITL decisions above, the nine mandatory sections, and assemble+review).
+  Frontier right now: **08, 09, 10, 12, 19**.
 
 ## How to contribute to the open title decision
 
