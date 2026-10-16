@@ -14,6 +14,8 @@ clear. The destination:
 ## Layout
 
 ```
+mindmap-rencana-konsep.png   ← visual mindmap of the whole concept plan (plain Indonesian)
+mindmap-rencana-konsep.svg   ← same, vector; .mmd = editable Mermaid source
 map.md            ← the map: destination, notes, decisions-so-far, open items (START HERE)
 issues/           ← one file per decision ticket (question + answer + comments history)
 adr/              ← architecture decision records (0001 camera autonomy, 0002 web joystick)

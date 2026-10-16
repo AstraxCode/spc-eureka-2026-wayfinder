@@ -1,0 +1,30 @@
+mindmap
+  root((Rencana Konsep<br/>Lengan Robot Teleoperasi))
+    Masalahnya
+      Pekerja nuklir terpapar<br/>radiasi saat menangani<br/>bahan radioaktif
+      Solusi: robot digerakkan<br/>dari jarak jauh
+      Yang dituntut: akurasi<br/>tidak boleh salah ambil,<br/>tidak boleh jatuh
+    Robotnya
+      Lengan robot meja<br/>dengan 5 sendi
+      Servo MG996R + papan<br/>ESP32 + driver PCA9685
+      Sistem terbuka<br/>tanpa sensor posisi
+    Cara Kendalinya<br/>Stik PS2 ± Rp40-70 ribu
+      Joystick maju = tangan<br/>robot maju, sendi bergerak<br/>bareng
+      Tekan tombol ABXY<br/>→ kunci 1 sendi saja,<br/>joystick atur sendi itu
+      Tekan trigger<br/>→ MODE HALUS:<br/>gerak kecil, presisi tinggi
+      Lepas joystick<br/>→ robot diam<br/>menahan posisi
+      Cadangan: web joystick<br/>di HP via Wi-Fi
+    Pembuktiannya<br/>Uji 2 x 2
+      Banding: mode kasar<br/>vs mode + fine mode
+      Jarak 1 meter<br/>vs 3 meter
+      40 percobaan x kondisi<br/>3 operator bergantian
+      Diukur: galat penempatan,<br/>ketahanan 2 detik,<br/>latensi jaringan
+    Kejujuran Paper
+      Belum ada data fisik<br/>sebelum 18 Okt
+      Semua hasil ditulis<br/>sebagai PERKIRAAN
+      Angka target didaftarkan<br/>lebih dulu, bukan<br/>dipalsukan
+      Uji fisik nyata di<br/>tahap Final, November
+    Jadwal
+      18 Okt: batas tim
+      23 Okt: batas resmi
+      Terbuka: judul paper<br/>menunggu keputusan tim
