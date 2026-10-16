@@ -18,6 +18,8 @@ mindmap-rencana-konsep.png   ← visual mindmap of the whole concept plan (plain
 rencana-konsep.md            ← the same concept plan as plain text (recommended read)
 mindmap-rencana-konsep.svg   ← same, vector; .mmd = editable Mermaid source
 map.md            ← the map: destination, notes, decisions-so-far, open items (START HERE)
+spec.md           ← the full-paper spec synthesised from the closed map (9 mandatory sections,
+                    locked decisions, evidence rules, pre-submission checks) — read after map.md
 issues/           ← one file per decision ticket (question + answer + comments history)
 adr/              ← architecture decision records (0001 camera autonomy, 0002 web joystick)
 research/         ← research-ticket findings (guidebook, prior art, Blynk sourcing)
