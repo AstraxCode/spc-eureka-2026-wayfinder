@@ -97,6 +97,11 @@ Settled during charting, before any ticket existed (no ticket carries these):
   Rp40k-70k". Verified live sweep 15 Oct found wireless units at Rp85k+ first-page Tokopedia.
   Paper must use the team-estimate label or a verified listing before submission. Pitch doc:
   `../../pitch-ps2-kontrol-dingleberry.md`.
+- Sender platform RESOLVED 16 Oct (ticket 06 amendment 3; ADR 0002 amendment): under the PS2
+  scheme the master MCU is a commodity operator-side **laptop** — PS2 controller → PS2-to-USB
+  adapter → laptop → Wi-Fi (**UDP**) → receiver ESP32 → PCA9685 → servos. "Sender ESP32 removed"
+  stands; transport UDP; latency remains a pre-registered target; the OS/Wi-Fi jitter is disclosed
+  in honest-limits. This clears the last blocker on the Metodologi architecture subsection.
 
 ## Not yet specified
 
@@ -112,10 +117,6 @@ Settled during charting, before any ticket existed (no ticket carries these):
   photos, no firmware, no STL). The extended abstract states build steps in past tense — either
   build evidence lives outside these dirs (phone photos etc.) or the wording overstates. Only the
   team can settle this; HASIL DAN PEMBAHASAN wording depends on it.
-- Sender-side ESP32 kept or removed under the PS2 scheme (ticket 06 amendment 2). A PS2
-  controller needs a master MCU to read it, so ticket 06's "sender ESP32 removed" cost claim
-  cannot stand as written; re-decide before the Metodologi architecture and Feasibility argument
-  are written.
 
 ## Out of scope
 

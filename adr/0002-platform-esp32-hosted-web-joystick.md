@@ -49,3 +49,19 @@ needs a master MCU to read it (PS2X library), so ticket 06's original "sender ES
 claim cannot hold as written. That re-decision belongs to ticket 06 and must land before the
 Metodologi architecture section is drafted.
 
+## Amendment 2026-10-16 — sender platform settled (commodity laptop)
+
+The sender-side re-decision left open above is settled (user, 16 Oct): under the PS2 scheme the
+master MCU is a **commodity operator-side laptop**, reached via a **PS2-to-USB adapter**. Committed
+chain: PS2 controller → PS2-to-USB adapter → laptop → Wi-Fi (**UDP**) → receiver ESP32 → PCA9685 →
+servos.
+
+Effect on this ADR:
+
+- The Decision's "no sender ESP32" holds — the sender is now a general-purpose laptop, not a
+  bespoke MCU.
+- Transport is **UDP**, not TCP, to avoid retransmit jitter.
+- Jitter from the OS/Wi-Fi hop is a **disclosed limitation**; one-way latency stays a pre-registered
+  target, never a measured result.
+- The ESP32-hosted web joystick remains the documented fallback (unchanged).
+

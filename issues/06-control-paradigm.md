@@ -91,3 +91,29 @@ a single joint then stick drives it (single-joint mode), trigger = fine-mode tog
 (independent, per user's approved Q9(i)). Consequences pending re-decision: ADR 0002 platform
 line, ticket 02's web-joystick UI spec, and the one-way Wi-Fi latency metric definition (sender
 ESP32 kept or removed). Pitch doc: ../../pitch-ps2-kontrol-dingleberry.md.
+
+**2026-10-16 (AMENDMENT 3 — sender-side re-decision; closes amendment 2):** The sender-side
+question left open by amendment 2 is settled (user decision, 16 Oct). Under the PS2 scheme the
+"master MCU" that reads the controller is a **commodity operator-side laptop**, not a sender
+ESP32. Committed control chain:
+
+> PS2 controller → PS2-to-USB adapter → laptop (operator-side) → Wi-Fi → receiver ESP32 →
+> PCA9685 → MG996R servos
+
+Consequences:
+- **"Sender ESP32 removed" (this ticket's original answer) STANDS**, now properly grounded: no
+  bespoke sender MCU is added; the operator-side node is a general-purpose laptop assumed already
+  available to the team. The cost claim is *upheld*, not retracted.
+- **Transport is UDP** (connectionless), not TCP — TCP retransmit stalls are the main avoidable
+  jitter source in an OS-mediated link. Design measures against jitter: dedicated Wi-Fi,
+  power-save off, 5 GHz fixed channel, raw-HID input, fixed-rate non-blocking send loop, no
+  jitter buffer (loss is benign under rate control + release-to-hold).
+- **Latency stays a pre-registered in-team target** (one-way ≤ 200 ms), never a measured result —
+  no trials before 18 Oct (hard constraint). The added OS/host hop is disclosed in the paper's
+  honest-limits subsection, not hidden.
+- Fallback chain unchanged: ESP32-hosted web joystick (ADR 0002) → Blynk Cloud.
+- Ticket 04's section plan is unaffected: eq (2) stays the baseline coarse mapping and the new
+  fine-mode equation is device-agnostic.
+
+Tracker: this closes to-tickets ticket **09**; the sender dependency on to-tickets ticket **13
+(Metodologi)** is cleared — 13 still waits on tickets 08 and 11.

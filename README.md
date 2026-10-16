@@ -46,6 +46,10 @@ docs/             ← tracker conventions (issue-tracker.md) and domain notes
 - **Drafting ticket set published (08–20)** — the `to-tickets` stage: 13 slices (glossary
   prefactor, the two HITL decisions above, the nine mandatory sections, and assemble+review).
   Frontier right now: **08, 09, 10, 12, 19**.
+- **Sender-side decision RESOLVED 16 Oct:** the sender is a **commodity operator-side laptop**
+  (PS2 → USB adapter → laptop → Wi-Fi UDP → receiver ESP32 → PCA9685 → servos); "sender ESP32
+  removed" stands; OS jitter disclosed. Recorded in ticket 06 amendment 3 + ADR 0002 amendment;
+  to-tickets ticket **09 resolved**; the Metodologi blocker is cleared.
 
 ## How to contribute to the open title decision
 

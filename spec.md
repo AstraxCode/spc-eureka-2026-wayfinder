@@ -151,11 +151,12 @@ latency** (all three presume human teleoperation, which the PS2 pivot preserves)
 - Glove/IMU and any analog physical joystick: **zero mentions** anywhere in the paper.
 - Receiver side unchanged: **open-loop**, no encoders, no new sensors, PCA9685 + MG996R servos;
   precision comes from the operator-side mode plus firmware limits.
-- **OPEN — not decided:** whether a **sender-side ESP32** is retained. A PS2 controller needs a
-  master MCU to read it (PS2X library), so the earlier "sender ESP32 removed" cost claim cannot
-  stand as written, and the Feasibility argument depends on how this resolves. Ticket 06 amendment 2
-  carries this re-decision. Until it lands, the Metodologi architecture subsection and the cost
-  sentence cannot be finalised.
+- **Resolved 16 Oct (ticket 06 amendment 3; ADR 0002 amendment):** the sender is a **commodity
+  operator-side laptop** — PS2 controller → PS2-to-USB adapter → laptop → Wi-Fi (**UDP**) →
+  receiver ESP32 → PCA9685 → servos. No bespoke sender MCU; the original "sender ESP32 removed"
+  cost claim stands. The OS/host hop is the disclosed latency-jitter source (mitigations: UDP,
+  dedicated link, power-save off, raw HID, fixed-rate loop). One-way latency remains a
+  pre-registered target (≤ 200 ms), never a measured result.
 
 ### Intervention specification
 
@@ -265,8 +266,9 @@ target**; placement error measured by phone photo against the marked grid; one-w
 - **Provisional-title discipline.** The title is the only unsettled paper-level decision. Draft
   freely, but keep the title in exactly one place so it can be replaced in one edit. It must not
   contain "aplikasi web" / "smartphone app".
-- **The sender-ESP32 OPEN item is the one genuine blocker** in this spec: it gates the Metodologi
-  architecture subsection and the Feasibility cost sentence. Everything else can be drafted now.
+- **Sender platform resolved (16 Oct):** the one genuine blocker is cleared — the Metodologi
+  architecture subsection and the Feasibility cost sentence can now be drafted (sender = commodity
+  laptop, UDP transport). The title is now the only open paper-level item.
 - **Unverified price.** Rp40k–70k is a team estimate. A real wired-PS2 listing link should be
   captured before the figure enters the paper; otherwise keep the estimate label.
 - **Unsettled factual question for the team:** whether the arm physically exists as a *built*
