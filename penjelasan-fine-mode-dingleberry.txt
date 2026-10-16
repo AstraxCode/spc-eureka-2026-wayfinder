@@ -1,0 +1,34 @@
+PENJELASAN FINE MODE - Lengan Robot Teleoperasi (SPC Eureka 2026)
+
+RANTAI KONTROL
+Jari menggerakkan joystick virtual di layar HP
+-> nilai kemiringan dikirim lewat Wi-Fi
+-> ESP32 penerima mengubahnya jadi sudut servo.
+
+DUA PERILAKU FINE MODE
+
+1. Tombol fine (saklar sensitivitas)
+   Ibarat "kecepatan pointer" di mouse:
+   - OFF (kasar): joystick sedikit -> sendi bergerak banyak. Cepat, untuk mendekati objek.
+   - ON (halus): joystick sedikit -> sendi hanya bergerak sedikit. Presisi, untuk penempatan akhir.
+
+2. Lepas jari = lengan membeku
+   Angkat jari dari layar -> lengan berhenti di posisi terakhir dan menahannya,
+   sampai jari menyentuh joystick lagi. Tidak ada drift.
+
+CARA PAKAI (dua mekanisme independen)
+1. Dekati objek, tombol OFF.
+2. Tap fine ON.
+3. Geser joystick gerakan kecil.
+4. Angkat jari -> lengan membeku.
+5. Tap fine OFF, kembali kasar.
+
+ALTERNATIF (tombol ditahan)
+Fine mode hanya aktif selama tombol ditekan sambil jari lain mengemudi.
+Lepas tombol -> otomatis kembali kasar. Lebih aman dari lupa mode,
+tapi jari kedua terus terpakai.
+
+KONTEKS
+Fine mode = kontribusi utama paper: intervensi kontrol sisi operator
+untuk memperkecil galat penempatan, diuji lewat protokol 2x2
+(kasar vs halus, jarak 1 m vs 3 m).
