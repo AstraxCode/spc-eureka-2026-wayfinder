@@ -53,7 +53,7 @@ So: never jump from the map straight to writing the paper.
 | Pre-edit backups | `.scratch/_backups/` |
 | GitHub mirror | https://github.com/AstraxCode/spc-eureka-2026-wayfinder (private) |
 | Mirror staging clone | `%LOCALAPPDATA%\hermes\profiles\archonx\cache\scratch\spc-wayfinder-repo` |
-| Open title decision | GitHub Issue #1 |
+| Title source (settled 16 Oct) | `.scratch/spc-full-paper/title.md` — GitHub Issue #1 closed |
 
 ---
 
