@@ -76,15 +76,21 @@ So: never jump from the map straight to writing the paper.
   `map.md` is now **`Status: closed`** — no decision is left open. Side effect: `GLOSSARY.md`'s
   fine-mode Indonesian term aligned to *mode posisi-halus*. Frontier now **11, 12, 19** (11 unblocked
   by 08; 17 is unblocked by 10).
-- GitHub mirror: `main` at `e596a50`; drafting branches `ticket-08` … `ticket-11` stacked on the
+- GitHub mirror: `main` at `e596a50`; drafting branches `ticket-08` … `ticket-12` stacked on the
   unmerged `to-tickets/paper-draft-2026-10-16` (PR #2).
-- **Drafting tickets resolved: 08, 09, 10 and 11.** Ticket 11 (Dasar Teori, 16 Oct) drafts the section
-  at `.scratch/spc-full-paper/draft/11-dasar-teori-archonx.md` — rebuilt on motion scaling / hybrid
-  position-rate control prior art with the smoothing caveat stated outright — and establishes the
+- **Drafting tickets resolved: 08, 09, 10, 11 and 12.** Ticket 11 (Dasar Teori, 16 Oct) drafts the
+  section at `.scratch/spc-full-paper/draft/11-dasar-teori-archonx.md` — rebuilt on motion scaling /
+  hybrid position-rate control prior art with the smoothing caveat stated outright — and establishes the
   **drafting convention** `draft/NN-<slug>-archonx.md` for every remaining section ticket. It extended
   the claim ledger with **S9–S13 / C14–C18** (the ticket-05 prior-art sources were not in the gate yet).
-  Section owns eqs (1)–(3); the latency/statistics equations renumber at tickets 13/14–20. Frontier now
-  **12, 13, 17, 19** (13 unblocked by 11).
+  Section owns eqs (1)–(3); the latency/statistics equations renumber at tickets 13/14–20. Ticket 12
+  (Pendahuluan, 16 Oct) is drafted at `draft/12-pendahuluan-archonx.md`; the frozen-boundary check passes
+  and the user's 16 Oct C8 decision (strip the unsourced failure chain and the element attribution) is
+  applied. Frontier now **13, 17, 19**.
+- **Two-agent load split (16 Oct, user direction):** the remaining drafting tickets are split in
+  `.scratch/spc-full-paper/drafting-loads-archonx.md` — **Load A** (archonx01) = the paper body, one
+  voice: 13 → 14 → 15 → 16; **Load B** (archonx) = front/back matter + packaging: 17 → 19 → 18 → 20.
+  `map.md`, `claim-ledger-archonx.md` and this card stay Load A's to edit.
 - Backups: `.scratch/_backups/spc-full-paper-20261016-2158/` (pre-ticket-11), `…-2147/` (pre-ticket-10).
 
 ---
@@ -280,10 +286,11 @@ carrying that label, or after a real listing link is captured.
 
 1. Read `.scratch/spc-full-paper/map.md` first — the low-res view of every decision.
 2. Read `.scratch/spc-full-paper/spec.md` for the collapsed plan.
-3. `to-tickets` **done** — 13 tickets `issues/08..20` published (PR #2, awaiting merge). **08, 09, 10
-   and 11 resolved 16 Oct** (the title is settled and the map is closed; Dasar Teori is drafted). Work
-   the frontier **12, 13, 17, 19** blockers-first (13 unblocked by 11); write each section draft to
-   `draft/NN-<slug>-archonx.md`.
+3. `to-tickets` **done** — 13 tickets `issues/08..20` published (PR #2, awaiting merge). **08, 09, 10, 11
+   and 12 resolved 16 Oct** (title settled, map closed, Dasar Teori + Pendahuluan drafted). Work the
+   frontier **13, 17, 19** blockers-first; write each section draft to `draft/NN-<slug>-archonx.md`. The
+   two-agent split is in `.scratch/spc-full-paper/drafting-loads-archonx.md` — Load A (archonx01) takes
+   **13 → 14 → 15 → 16**, Load B (archonx) takes **17 → 19 → 18 → 20**.
 4. Work tickets blockers-first with `implement`, each in a fresh context, grounded by the claim
    ledger.
 5. Re-sync the GitHub mirror after every session that edits the tracker.

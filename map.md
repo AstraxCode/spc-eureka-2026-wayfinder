@@ -132,6 +132,14 @@ Settled during charting, before any ticket existed (no ticket carries these):
   not yet in the gate). This establishes the drafting convention `draft/NN-<slug>-archonx.md`, and the
   section owns eqs (1)–(3) (torque, coarse mapping, fine-mode gain reduction); the latency/statistics
   equations renumber at tickets 13/14–20. This unblocks 13.
+- [Pendahuluan](issues/12-pendahuluan.md) (RESOLVED 16 Oct): drafted at
+  `draft/12-pendahuluan-archonx.md`. Frozen-boundary check passes: the radiation/accuracy/handling
+  background and the core problem are carried in substance from the Extended Abstract (admin ruling 14
+  Oct), and the old comparison is demoted to motivation ("bukan lagi pertanyaan penelitiannya"). **User
+  decision 16 Oct** resolved the C8 conflict: the unsourced mechanical-failure chain (C8 = NOT FOUND) and
+  the element attribution (S2 supports only "ionizing radiation") are removed, and the dose/DNA claims are
+  carried from the ledger (C1/C2, C3). No new ledger entry needed. Drafting-load split recorded in
+  `drafting-loads-archonx.md`.
 
 ## Not yet specified
 
