@@ -2,6 +2,13 @@
 
 How the engineering skills should consume this repo's domain documentation when exploring the codebase.
 
+## This repo's paths (overrides the generic layout below)
+
+- **`GLOSSARY.md`** — at the **effort root**, i.e. the `SPC Eureka 2026/` directory (single context;
+  there is no `GLOSSARY-MAP.md`).
+- **ADRs** — in **`.scratch/spc-full-paper/adr/`**, not `docs/adr/`. This repo keeps its tracker
+  artefacts (map, spec, tickets, ADRs) under `.scratch/<effort>/`, per `docs/agents/issue-tracker.md`.
+
 ## Before exploring, read these
 
 - **`GLOSSARY.md`** at the repo root, or

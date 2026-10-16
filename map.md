@@ -78,6 +78,13 @@ Settled during charting, before any ticket existed (no ticket carries these):
 - Admin ruling 14 Oct (via user): title edits ALLOWED; Pendahuluan + core problem LOCKED. Closes
   the title-change fog item; detail in ticket 01's answer section.
 - [Prior art](issues/05-prior-art.md): motion scaling + hybrid position/rate control well supported; NO direct evidence smoothing alone improves placement accuracy (treat as hypothesis); 2-s hold is project-defined, not a standard metric.
+- [GLOSSARY + domain wiring](issues/08-glossary-and-domain-wiring.md) (RESOLVED 16 Oct): root
+  `GLOSSARY.md` created — 19 terms (the 12 required plus stick, fallback, operator, placement error,
+  one-way latency, expected result, team estimate). Fine mode is defined as gain reduction and
+  explicitly NOT smoothing/filtering/clutch; the sender-side-ESP32 entry records the retention
+  question as OPEN (ticket 09) rather than settling it; `2-second hold` carries "project-defined"
+  inside its definition. `AGENTS.md` + `docs/agents/domain.md` now point at the real ADR directory
+  `.scratch/spc-full-paper/adr/`. This unblocks 11 → 13.
 - [Paper restructure](issues/04-paper-restructure.md) (RESOLVED 16 Oct): abstract
   reframed to solution (fine-positioning contribution, results labelled expectations); section plan
   accepted (Pendahuluan background verbatim, Dasar Teori rebuilt on motion scaling/hybrid
