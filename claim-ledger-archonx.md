@@ -233,3 +233,87 @@ library, billporter.info) for the library claim; the ESP32 fork only as the port
 | C11 | A PS2 controller cannot transmit on its own; it must be polled by a host MCU, so the sender-side ESP32 is required | **VERIFIED (architecture)** | S8 — four-wire polled interface; ESP32 port exists | High (that a host is required) / Med (this fork) | Metodologi architecture; Feasibility |
 | C12 | Wired PS2 clone controller price Rp40k–70k | **TEAM ESTIMATE — no listing** | `map.md` price fact (16 Oct); the only live-verified figure is wireless at Rp85k+ (Tokopedia sweep, 15 Oct) | Low | Feasibility, **only with the team-estimate label** |
 | C13 | The sender-side ESP32 adds no purchase cost | **INTERNAL — inventory, not external evidence** | ticket 06 criterion 2 / `map.md`: the team owns 2x ESP32 | High | Feasibility |
+
+---
+
+## Full-paper additions — prior art for Dasar Teori (added 2026-10-16, ticket 11)
+
+Ticket 11 requires `Dasar Teori` to be rebuilt on motion scaling and hybrid position/rate control, and
+`spec.md` makes this file the gate for the full paper. The prior-art sources researched in
+`research/05-prior-art.md` (ticket 05) were not carried here yet, so they are graded and added now —
+nothing else in that file's findings changes.
+
+### S9 — Richter, Orosco & Yip — motion scaling under high delay — Grade B
+F. Richter, R. K. Orosco, M. C. Yip, *Motion Scaling Solutions for Improved Performance in High Delay
+Surgical Teleoperation*, ICRA 2019. arXiv:1902.03290.
+URL: https://arxiv.org/abs/1902.03290
+Retrieval: `web_extract`, 2026-10-13 (ticket 05). Abstract + introduction read.
+Peer-reviewed ICRA paper; the arXiv version is what was read.
+
+**Supports:** motion scaling near a target improves error rate at the cost of task time; positional
+(lower scale near obstacle) and velocity (scale rises with speed) strategies both report lower error
+rates; 16 of 17 participants had their best error-rate performance with a proposed solution.
+**Cannot support:** any figure for this project's arm — different device (da Vinci), surgical setup,
+and obstacle sensing.
+
+### S10 — Han & Yang — position–rate hybrid control, nuclear-fuel task — Grade B
+JiWoong Han, Gi-Hun Yang, *Improving Teleoperator Efficiency Using Position–Rate Hybrid Controllers and
+Task Decomposition*, Applied Sciences 12(19), 9672 (2022).
+URL: https://www.mdpi.com/2076-3417/12/19/9672
+Retrieval: `web_extract`, 2026-10-13 (ticket 05). Open-access peer-reviewed journal.
+
+**Supports:** the low-scale/high-scale precision–speed compromise; the "bubble" strategy (rate control
+outside the radius, position control inside); their task-decomposed position–rate hybrid controller
+reduced completion time 17,23% and NASA-TLX 34,02% versus conventional position control.
+**Cannot support:** this project's accuracy — their master/slave setup and task differ.
+
+### S11 — Lee, Han & Yang — variable scaling framework — Grade B (abstract only)
+Hunjo Lee, Jiwoong Han, Gi-Hun Yang, *Development of Variable Scaling Teleoperation Framework for
+Improving Teleoperation Performance*, Int. J. Control, Automation, and Systems 22, 936–945 (2024).
+URL: https://link.springer.com/article/10.1007/s12555-022-1099-z
+Retrieval: `web_extract`, 2026-10-13 (ticket 05). **Abstract-level only — full text is paywalled.**
+
+**Supports:** a variable-scaling framework selected by task phase (contact/non-contact) exists and
+reports reductions in contact force, completion time and perceived workload versus fixed scaling.
+**Cannot support:** its exact percentages — the abstract is the only accessible layer, so the paper
+describes the result qualitatively and quotes no number. Do not lift a figure from this source.
+
+### S12 — Yoon et al. — adaptive motion scaling — Grade B (preprint)
+Jeonghyeon Yoon et al., *A Single Scale Doesn't Fit All: Adaptive Motion Scaling for Efficient and
+Precise Teleoperation*, arXiv:2503.01216v1 (2025).
+URL: https://arxiv.org/abs/2503.01216v1
+Retrieval: `web_extract`, 2026-10-13 (ticket 05). Preprint; not confirmed peer-reviewed.
+
+**Supports:** coarse/fine intent classification with adaptive scaling reduced clutch operations 38,46%,
+task completion time 11,96%, and NASA-TLX 58,01% versus one fixed scale; the low-pass filter in that
+work smooths the scale factor, **not** the operator's raw command stream.
+**Cannot support:** that filtering the raw command improves placement accuracy — it filters elsewhere.
+
+### S13 — Wang, Zhang & Zhang — time-series filter comparison — Grade B (abstract only)
+Zixiong Wang, Yinlong Zhang, Xin Zhang, *A comparative study on human motion smoothing filters for
+RGB-D camera teleoperation*, IEEE 2024 30th Int. Conf. on Mechatronics and Machine Vision in Practice
+(M2VIP). URL: https://ieeexplore.ieee.org/abstract/document/10746144
+Retrieval: `web_extract`, 2026-10-13 (ticket 05). **Abstract-level only — IEEE full text restricted.**
+
+**Supports:** eight time-series filters were compared for RGB-D motion-capture teleoperation on time
+complexity, MAE, variance and RMSE; the accessible abstract reports smoother filtered trajectories and
+no placement-error or target-acquisition study.
+**Cannot support:** any statement that smoothing alone improves placement accuracy — this is the
+honesty caveat (below), stated at abstract level only.
+
+| # | Claim in your draft | Status | Evidence | Confidence | Where it goes |
+|---|---|---|---|---|---|
+| C14 | Low position scale gives resolution but forces more re-indexing; high scale speeds approach but coarsens; rate control is poorly transparent near the target. A task-decomposed position–rate hybrid cut completion time 17,23% and NASA-TLX 34,02% vs conventional position control | **VERIFIED** | S10 | High (open access) | Dasar Teori — kendali hibrida |
+| C15 | Motion scaling near a target lowers error rate at the cost of task time; 16 of 17 participants got their best error rate from a proposed solution | **VERIFIED** | S9 | Med-High (arXiv version of ICRA paper) | Dasar Teori — penskalaan gerak |
+| C16 | A variable-scaling framework selected by contact/non-contact task phase exists and reports reductions in contact force, completion time and workload | **VERIFIED (abstract level)** | S11 | Med (full text paywalled) | Dasar Teori — **describe qualitatively, quote no number** |
+| C17 | Coarse/fine adaptive scaling reduced clutch operations 38,46%, completion time 11,96%, NASA-TLX 58,01%; its low-pass filter acts on the scale factor, not the raw command | **VERIFIED** | S12 | Med (preprint) | Dasar Teori — penskalaan adaptif |
+| C18 | The eight-filter comparison reports smoother trajectories and error measures, **not** a placement-accuracy result — so smoothing alone is a hypothesis, not a proven effect | **VERIFIED (abstract level)** | S13 | Med (abstract only) | Dasar Teori — honesty caveat (prior-art honesty check) |
+
+**Unchanged from the earlier entries:** the Wi-Fi physics claims (C5 = S3 Akl; C6 = S4 Pandey) and the
+PS2 polled-peripheral claim (C11 = S8 PS2X) cover the rest of Dasar Teori — no new source was needed for
+them.
+
+## Related
+
+- **Hub:** [[Dingle's research/SPC Eureka 2026/SPC Eureka 2026 MOC|SPC Eureka 2026 MOC]]
+- **Nearby:** [[Dingle's research/SPC Eureka 2026/docs/agents/domain|domain]], [[Dingle's research/SPC Eureka 2026/docs/agents/issue-tracker|issue-tracker]], [[Dingle's research/SPC Eureka 2026/handoff-paper-drafting-2026-10-16|handoff-paper-drafting-2026-10-16]]
