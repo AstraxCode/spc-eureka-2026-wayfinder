@@ -62,3 +62,11 @@ value.
 Pre-edit backups: `.scratch/_backups/spc-full-paper-20261016-1956/` (AGENTS.md, domain.md, this
 ticket).
 
+## Amendment — 2026-10-16 (glossary term aligned to the locked title)
+
+**Amendment 1 (16 Oct 2026, ticket 10).** The `Fine mode` entry's Indonesian paper term was
+changed from *mode halus* to ***mode posisi-halus*** (short form *mode halus*). Reason: ticket 10
+locked the paper title as "…**Mode Posisi-Halus** Berbasis Stik PS2 …", and the title is the
+user's decision — so the glossary follows the title, not the reverse. No other term or definition
+is affected, and the `_Avoid_` list for `Fine mode` is unchanged.
+

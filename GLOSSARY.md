@@ -43,7 +43,9 @@ _Avoid_: normal mode, fast mode, default mode.
 **Fine mode**:
 The paper's contribution: an operator-triggered control layer, toggled by the controller's trigger,
 that lowers the command-to-joint gain so a given stick displacement produces a smaller joint motion
-near the target. Paired with release-to-hold. Indonesian paper term: *mode halus*.
+near the target. Paired with release-to-hold. Indonesian paper term: *mode posisi-halus* (short
+form *mode halus*) — the long form was aligned to the locked paper title on 16 Oct 2026 (ticket 10,
+`title.md`), which reads "Mode Posisi-Halus".
 _Avoid_: smoothing, filtering, adaptive mode, bubble mode, clutch, position control.
 
 **Gain reduction**:
@@ -137,3 +139,8 @@ _Avoid_: price, cost (unlabelled).
 **`-archonx`**:
 The internal watermark suffix this effort appends to the paper's title and every section header, and
 to the working documents behind it, to mark them as in-development drafts.
+
+## Related
+
+- **Hub:** [[Dingle's research/SPC Eureka 2026/SPC Eureka 2026 MOC|SPC Eureka 2026 MOC]]
+- **Nearby:** [[Dingle's research/SPC Eureka 2026/TEMO|TEMO]], [[Dingle's research/SPC Eureka 2026/WORKFLOW-paper-development|WORKFLOW-paper-development]], [[Dingle's research/SPC Eureka 2026/claim-ledger-archonx|claim-ledger-archonx]]

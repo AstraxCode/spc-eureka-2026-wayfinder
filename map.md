@@ -1,6 +1,6 @@
 # Map: SPC Eureka 2026 full paper repositioning
 
-Status: open
+Status: closed
 Tracker: local markdown — see docs/agents/issue-tracker.md (Wayfinding operations)
 
 ## Destination
@@ -115,13 +115,23 @@ Settled during charting, before any ticket existed (no ticket carries these):
   (5x MPU6050 + flex sensor) is no longer needed. Committed chain: PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos. `t_send` stamps at
   the sender's stick-read, so the unmeasured PS2X polling interval sits inside the latency path;
   <= 200 ms stays a pre-registered target.
+- [Final title](issues/10-final-title.md) (RESOLVED 16 Oct): the title is decided and held in exactly
+  one place, `.scratch/spc-full-paper/title.md` (`TITLE_INTERNAL` / `TITLE_SUBMISSION`) — Indonesian,
+  solution-framed: it names the committed PS2-stick paradigm and the fine-positioning
+  (mode posisi-halus) contribution, keeps the locked radioactive-material background clause, and
+  carries none of the prohibited interface strings. The internal form keeps the `-archonx` watermark;
+  the submitted cover title drops it (user decision). Closes the last open map item and GitHub Issue
+  #1. Side effect: `GLOSSARY.md`'s Fine-mode Indonesian term aligned to *mode posisi-halus* (ticket 08
+  amendment 1).
 
 ## Not yet specified
 
-- Final title of the paper — STILL NOT CHOSEN. User confirmed 16 Oct that the working title stays
-  TEMPORARY and authorised the effort to proceed past it. Live on GitHub Issue #1; must be
-  finalised before submission. Every other ticket-04 restructure decision is settled (see
-  Decisions so far).
+- Final title of the paper — **SETTLED 16 Oct 2026 (ticket 10).** The title is held in exactly one
+  place, `.scratch/spc-full-paper/title.md` (`TITLE_INTERNAL` / `TITLE_SUBMISSION`): Indonesian,
+  solution-framed, naming the committed PS2-stick paradigm and the fine-positioning contribution,
+  keeping the locked radioactive-material background clause; internal form ends `-archonx`, and the
+  submitted cover title drops that suffix (user decision). GitHub Issue #1 closed. Every other
+  ticket-04 restructure decision is settled.
 - Verified wired-PS2 listing price: team estimate is Rp40k-70k (16 Oct); a real listing link
   should be captured before the figure enters the paper.
 

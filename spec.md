@@ -6,7 +6,9 @@ Date: 16 Oct 2026 — team deadline 18 Oct 2026, official submission window 11�
 Source of truth: `map.md`, `issues/*.md`, `adr/*.md`, `research/*.md`, `claim-ledger-archonx.md`
 
 > This spec synthesises the decisions already settled in the wayfinder map and its tickets. It
-> introduces no new decisions. One item is deliberately left open and is marked **OPEN** below.
+> introduces no new decisions. The one item it previously left open — the final title — was closed
+> on 16 Oct 2026 by ticket 10 and is now held in the single source
+> `.scratch/spc-full-paper/title.md`.
 
 ## Problem Statement
 
@@ -261,17 +263,22 @@ target**; placement error measured by phone photo against the marked grid; one-w
 - **The glove/IMU and analog-physical-joystick paths** — rejected by the user; zero mentions.
 - **Real fuel-rod handling claims** — the paper is a tabletop proof of concept and must say so.
 - **Anything beyond this competition submission** — publication, other contests, productisation.
-- **The final title itself** — deliberately left open (GitHub Issue #1); the paper proceeds with a
-  provisional title. This is the one decision the effort is not closing here.
+- ~~**The final title itself**~~ — **CLOSED 16 Oct 2026 (ticket 10).** The title is decided and held
+  in one place, `.scratch/spc-full-paper/title.md` (`TITLE_INTERNAL` keeps the `-archonx` suffix;
+  `TITLE_SUBMISSION` drops it for the cover page). GitHub Issue #1 is closed. Nothing is left open
+  here.
 
 ## Further Notes
 
-- **Provisional-title discipline.** The title is the only unsettled paper-level decision. Draft
-  freely, but keep the title in exactly one place so it can be replaced in one edit. It must not
-  contain "aplikasi web" / "smartphone app".
+- **Title (settled 16 Oct 2026, ticket 10).** The title is decided and lives in exactly one place —
+  `.scratch/spc-full-paper/title.md` (`TITLE_INTERNAL` / `TITLE_SUBMISSION`) — so it is replaced in
+  one edit and forces no rewrite; every other artefact points at that file instead of restating the
+  string. The internal form carries the `-archonx` suffix; the cover page uses the form without it.
+  The title carries none of the prohibited interface strings.
 - ~~**The sender-ESP32 OPEN item is the one genuine blocker** in this spec.~~ **Closed 16 Oct
   (ticket 09):** the sender-side ESP32 is retained and the cost claim is retracted — see
-  "Control interface and architecture" above. No spec-level blocker remains except the title.
+  "Control interface and architecture" above. The title — the last spec-level blocker — was closed
+  the same day (ticket 10), so **no spec-level blocker remains**.
 - **Unverified price.** Rp40k–70k is a team estimate. A real wired-PS2 listing link should be
   captured before the figure enters the paper; otherwise keep the estimate label.
 - **Unsettled factual question for the team:** whether the arm physically exists as a *built*
