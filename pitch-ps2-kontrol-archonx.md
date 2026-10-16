@@ -1,4 +1,4 @@
-# Pitch: Kontrol Stik PS2 untuk Lengan Robot Teleoperasi-dingleberry
+# Pitch: Kontrol Stik PS2 untuk Lengan Robot Teleoperasi-archonx
 
 SPC Eureka 2026 — draft pitch (tim), 15 Okt 2026. Status: usulan baru, belum final.
 

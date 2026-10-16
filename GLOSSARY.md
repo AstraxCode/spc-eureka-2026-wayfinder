@@ -1,4 +1,4 @@
-# SPC Eureka 2026 full paper — domain language-dingleberry
+# SPC Eureka 2026 full paper — domain language-archonx
 
 The working vocabulary for the SPC Eureka! ITB 2026 full paper: a teleoperated tabletop 5-DOF arm
 that places objects accurately while the operator stands away from the source. Every ticket,
@@ -72,11 +72,11 @@ servos. Unchanged by this work: open-loop, no new sensors.
 _Avoid_: slave, target board.
 
 **sender-side ESP32**:
-The microcontroller that would read the PS2 controller and transmit commands over Wi-Fi. **Whether
-it is retained is not yet decided** — reading a PS2 controller needs a master MCU, which
-contradicts the earlier "sender ESP32 removed" cost claim. Open until ticket 09 lands; the paper
-must not describe either state before then.
-_Avoid_: master, transmitter (as settled fact).
+The microcontroller on the operator's side: it polls the PS2 controller (four-wire interface, PS2X
+library), runs the three control layers, and transmits commands over Wi-Fi to the receiver ESP32.
+Retained by the 16 Oct ticket-09 decision; it is a part the team already owns, which is what the
+Feasibility argument now rests on instead of the retracted "sender ESP32 removed" saving.
+_Avoid_: master, transmitter, gateway.
 
 ## Evaluation
 
@@ -134,6 +134,6 @@ _Avoid_: price, cost (unlabelled).
 
 ## Working conventions
 
-**`-dingleberry`**:
+**`-archonx`**:
 The internal watermark suffix this effort appends to the paper's title and every section header, and
 to the working documents behind it, to mark them as in-development drafts.

@@ -10,7 +10,7 @@ paper proceeds past it (user authorised 16 Oct).
 
 - [ ] Title is Indonesian, solution-framed, and satisfies ticket 04's constraints (committed PS2
       control paradigm; Pendahuluan + core problem untouched).
-- [ ] Title contains no "aplikasi web" / "smartphone app"; carries the `-dingleberry` internal
+- [ ] Title contains no "aplikasi web" / "smartphone app"; carries the `-archonx` internal
       watermark convention.
 - [ ] The chosen title is stored in **exactly one place** (expand–contract) so the substitution
       forces no rewrite.

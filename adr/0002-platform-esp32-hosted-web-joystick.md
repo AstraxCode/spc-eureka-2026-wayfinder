@@ -49,3 +49,18 @@ needs a master MCU to read it (PS2X library), so ticket 06's original "sender ES
 claim cannot hold as written. That re-decision belongs to ticket 06 and must land before the
 Metodologi architecture section is drafted.
 
+## Amendment 2 — 2026-10-16 (ticket 09 resolved): the sender-side ESP32 is RETAINED
+
+The question the amendment above left open is settled: the **sender-side ESP32 is retained**. It is
+the master MCU that reads the PS2 controller (four-wire polled interface; PS2X library) and
+transmits commands over Wi-Fi to the receiver ESP32. Without it the operator side has no host,
+because a PS2 pad has no radio and only answers polls — so "no sender MCU" would require
+reverting the interface to a screen, which this ADR already demoted.
+
+The two fallbacks are unchanged: the **ESP32-hosted web joystick** remains the documented fallback
+to the PS2 primary, with Blynk Cloud behind it.
+
+Ticket 06's original "sender ESP32 removed" cost saving is retracted (ticket 06 amendment 3). The
+Feasibility argument now rests on the sender ESP32 being an already-owned part (2x ESP32 in the
+inventory) plus the glove hardware that is no longer needed. Chain: PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos.
+

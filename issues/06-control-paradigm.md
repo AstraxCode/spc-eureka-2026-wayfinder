@@ -90,4 +90,32 @@ scheme: stick forward = end-effector forward (coordinated multi-DOF rate control
 a single joint then stick drives it (single-joint mode), trigger = fine-mode toggle
 (independent, per user's approved Q9(i)). Consequences pending re-decision: ADR 0002 platform
 line, ticket 02's web-joystick UI spec, and the one-way Wi-Fi latency metric definition (sender
-ESP32 kept or removed). Pitch doc: ../../pitch-ps2-kontrol-dingleberry.md.
+ESP32 kept or removed). Pitch doc: ../../pitch-ps2-kontrol-archonx.md.
+
+**2026-10-16 (AMENDMENT 3, ticket 09 resolved — sender-side ESP32 KEPT):** the re-decision named
+"pending" in amendment 2 has landed. The **sender-side ESP32 is RETAINED**: it is the master MCU
+that reads the PS2 controller (four-wire polled interface, PS2X library) and transmits commands
+over Wi-Fi to the receiver ESP32. Reason: with the phone gone the operator side has no host at all
+— a PS2 pad has no radio and only answers polls — so "no sender MCU" is reachable only by
+reverting the input device to a screen, which amendment 2 demoted to documented fallback.
+
+Consequences recorded here, in the original ticket (never a silent map overwrite):
+
+1. **The "sender ESP32 removed" cost saving in this ticket's Answer is RETRACTED.** It was true of
+   the phone interface only. What replaces it in the Feasibility argument: the sender ESP32 is a
+   part the team **already owns** (the inventory carries 2x ESP32), so the interface change adds no
+   MCU purchase, and the real saving is the glove hardware no longer needed (5x MPU6050 + flex
+   sensor). Feasibility (15 percent of the rubric) now argues the 2-ESP32 design.
+2. **The three control layers run on the sender ESP32's firmware**, not in an app: multi-DOF
+   coordination kinematics (coarse), ABXY single-joint select, and the trigger-toggled gain
+   reduction + release-to-hold of ticket 02's amendment.
+3. **Chain committed:** PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos. Receiver unchanged, still open-loop.
+4. **Latency:** `t_send` is stamped at the sender's stick-read, so the PS2X polling interval sits
+   *inside* the measured path (identical in conditions A and B, so it does not bias the
+   comparison). <= 200 ms stays a pre-registered in-team target, never a result. The polling rate
+   has not been measured — no figure may be stated.
+5. **Price:** the "<Rp50.000" line in amendment 2 is a *target*, not a verified price. The only
+   live-verified figure is the wireless class at Rp85k+ (15 Oct sweep); the paper uses the
+   wired-clone Rp40k-70k **team estimate** with that label, or no figure.
+
+Platform line amended in ADR 0002 (amendment 2). Decision ticket: 09.

@@ -26,7 +26,7 @@ groups (control paradigm, control chain, evaluation, working conventions), forma
 The 12 required terms are all present, plus 10 the paper would otherwise leave undefined:
 **stick**, **fallback**, **operator**, **placement error**, **one-way latency**, **expected
 result**, **team estimate**, the two control-chain terms **receiver ESP32** and **sender-side
-ESP32**, and the **`-dingleberry`** convention. Each is load-bearing in a specific ticket:
+ESP32**, and the **`-archonx`** convention. Each is load-bearing in a specific ticket:
 `Stick` and the two ESP32 entries for ticket 13's architecture, `fallback` for the ADR-0002
 demotion, `operator` and `placement error` for ticket 13's protocol, `one-way latency` for the
 latency definition, `expected result` and `team estimate` for ticket 14's labelling discipline.

@@ -10,5 +10,5 @@ ticket 10 lands.
 - [ ] Follows the official template's cover layout.
 - [ ] Title is drawn from the single title source (expand–contract) — substituting ticket 10's
       value needs one edit and no rewrite.
-- [ ] Carries the `-dingleberry` watermark convention on the title.
+- [ ] Carries the `-archonx` watermark convention on the title.
 - [ ] Author/team fields filled per the template.
