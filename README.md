@@ -34,7 +34,7 @@ WORKFLOW-paper-development.md ← the full chain map→spec→tickets→draft→
 
 - **7 of 7 wayfinder tickets resolved** — ticket 04 (paper restructure) closed **16 Oct 2026**.
 - **Drafting stage started: ticket 08 (GLOSSARY + domain wiring) is resolved.** Root `GLOSSARY.md`
-  now exists (19 terms) and the domain-doc declarations point at the real ADR directory.
+  now exists (22 terms) and the domain-doc declarations point at the real ADR directory.
 - **Open: the paper title only.** The user confirmed on 16 Oct that the working title stays
   **TEMPORARY** and authorised the effort to proceed to the spec/drafting stage with it still
   provisional. It must be finalised before submission — see GitHub Issue #1 and the map's

@@ -250,7 +250,7 @@ carrying that label, or after a real listing link is captured.
 ## Environment fixes worth doing
 
 - ~~`AGENTS.md` declares a root `GLOSSARY.md` and `docs/adr/`. **Neither exists**~~ — **DONE 16 Oct
-  (ticket 08).** Root `GLOSSARY.md` now exists (19 terms); `AGENTS.md` and `docs/agents/domain.md`
+  (ticket 08).** Root `GLOSSARY.md` now exists (22 terms); `AGENTS.md` and `docs/agents/domain.md`
   now point at `.scratch/spc-full-paper/adr/`, where the ADRs actually live.
 - Record amendments **immediately, mid-interview**, in the ORIGINAL ticket. The PS2 pivot sat
   unrecorded in ticket 04 for a day and left four stale artifacts behind it.

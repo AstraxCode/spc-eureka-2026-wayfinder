@@ -19,16 +19,17 @@ where they actually live. Fixes the `AGENTS.md` drift (it declares a root `GLOSS
 
 ## Answer
 
-**Resolved 2026-10-16 (ArchonX).** `GLOSSARY.md` created at the effort root — 19 terms in four
+**Resolved 2026-10-16 (ArchonX).** `GLOSSARY.md` created at the effort root — 22 terms in four
 groups (control paradigm, control chain, evaluation, working conventions), format per the
 `domain-modeling` skill: opinionated, one-to-two-sentence definitions, `_Avoid_` synonyms.
 
-The 12 required terms are all present, plus 7 the drafting tickets would otherwise re-invent:
-**Stick**, **fallback**, **operator**, **placement error**, **one-way latency**, **expected
-result**, **team estimate**. Each of those is load-bearing in a specific ticket: `Stick` for
-ticket 13's architecture, `fallback` for the ADR-0002 demotion, `operator` and `placement error`
-for ticket 13's protocol, `one-way latency` for the latency definition, `expected result` and
-`team estimate` for ticket 14's labelling discipline.
+The 12 required terms are all present, plus 10 the paper would otherwise leave undefined:
+**stick**, **fallback**, **operator**, **placement error**, **one-way latency**, **expected
+result**, **team estimate**, the two control-chain terms **receiver ESP32** and **sender-side
+ESP32**, and the **`-dingleberry`** convention. Each is load-bearing in a specific ticket:
+`Stick` and the two ESP32 entries for ticket 13's architecture, `fallback` for the ADR-0002
+demotion, `operator` and `placement error` for ticket 13's protocol, `one-way latency` for the
+latency definition, `expected result` and `team estimate` for ticket 14's labelling discipline.
 
 Deliberate choices worth flagging:
 
@@ -54,8 +55,9 @@ the skill's own instructions would keep sending readers to `docs/adr/`.
 
 **Verification run:** all 12 required terms present; zero hits for "aplikasi web" / "smartphone
 app"; no camera-autonomy plan asserted (ADR 0001); web joystick appears only as the documented
-fallback (ADR 0002); sender-ESP32 left open (ticket 09); only two numbers in the whole file
-(200 ms, 8 of 10), both carried from the claim ledger and the locked protocol.
+fallback (ADR 0002); sender-ESP32 left open (ticket 09). Every figure in the file is carried from
+the tracker or the locked protocol — `5-DOF`, `8 of 10`, `200 ms`, `Rp40k–70k` — with no invented
+value.
 
 Pre-edit backups: `.scratch/_backups/spc-full-paper-20261016-1956/` (AGENTS.md, domain.md, this
 ticket).
