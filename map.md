@@ -17,7 +17,7 @@ one-way latency.
   5x MPU6050, flex sensor, PCA9685, MG996R servos, direct Wi-Fi link).
 - Skills every session should consult: `grilling`, `domain-modeling` (GLOSSARY/ADRs), `research`,
   `prototype`, `grounded-citations` (every external claim linkable), `paper-architecture`
-  (`-dingleberry` watermark on title and section headers).
+  (`-archonx` watermark on title and section headers).
 - Standing preferences: submission text Indonesian; blunt/direct style; never fabricate citations or
   data; keep facts, assumptions and recommendations visibly distinct.
 - Admin permission (confirmed): any aspect of the paper may change EXCEPT the problem background —
@@ -31,7 +31,7 @@ one-way latency.
   HASIL DAN PEMBAHASAN -> KESIMPULAN -> DAFTAR PUSTAKA -> LAMPIRAN (Indonesian, IEEE-style example
   refs in the template). Control-intervention material on disk: one sentence on "penskalaan dan
   deadzone" + the clamp equation; ZERO mentions of smoothing, fine-positioning, calibration or
-  feedback cues. Source-verified claims already curated in `claim-ledger-dingleberry.md`, which
+  feedback cues. Source-verified claims already curated in `claim-ledger-archonx.md`, which
   flags targets like "target <= 200 ms" as pre-registered targets, not results. The Obsidian vault
   tree is a byte-identical mirror; the SPC tree is the working copy.
 - Dates: team internal 18 Oct, official 23 Oct 2026. Charted 13 Oct 2026.
@@ -53,7 +53,9 @@ Settled during charting, before any ticket existed (no ticket carries these):
 - Metrics: keep all three — placement error, 2-second hold, one-way latency. This presumes
   teleoperation; revisit if ticket 06 commits to autonomy.
 - Delicate handling, operationally: no crush, no drop, accurate placement.
-- Control paradigm (ticket 06, resolved 14 Oct): **app-based teleoperation, sender ESP32 removed**;
+- Control paradigm (ticket 06, resolved 14 Oct): **app-based teleoperation, sender ESP32 removed**
+  *(superseded 15-16 Oct — see the PS2 amendment bullet and the ticket-09 decision below; the sender
+  ESP32 is KEPT)*;
   camera-based autonomy rejected -> ADR 0001 (future-work paragraph); glove/IMU path kept as a
   documented Final-stage alternative. Platform AMENDED by ticket 07 + ADR 0002: primary interface
   is an **ESP32-hosted web joystick** (no cloud; current Blynk IoT has no self-hosted server), with
@@ -81,7 +83,7 @@ Settled during charting, before any ticket existed (no ticket carries these):
 - [GLOSSARY + domain wiring](issues/08-glossary-and-domain-wiring.md) (RESOLVED 16 Oct): root
   `GLOSSARY.md` created — 22 terms (the 12 required plus stick, fallback, operator, placement error,
   one-way latency, expected result, team estimate, receiver ESP32, sender-side ESP32, and the
-  `-dingleberry` convention). Fine mode is defined as gain reduction and
+  `-archonx` convention). Fine mode is defined as gain reduction and
   explicitly NOT smoothing/filtering/clutch; the sender-side-ESP32 entry records the retention
   question as OPEN (ticket 09) rather than settling it; `2-second hold` carries "project-defined"
   inside its definition. `AGENTS.md` + `docs/agents/domain.md` now point at the real ADR directory
@@ -104,7 +106,15 @@ Settled during charting, before any ticket existed (no ticket carries these):
 - Price fact (16 Oct, user/team estimate — NOT a verified listing): wired PS2 clone "around
   Rp40k-70k". Verified live sweep 15 Oct found wireless units at Rp85k+ first-page Tokopedia.
   Paper must use the team-estimate label or a verified listing before submission. Pitch doc:
-  `../../pitch-ps2-kontrol-dingleberry.md`.
+  `../../pitch-ps2-kontrol-archonx.md`.
+- [Sender-side ESP32](issues/09-sender-esp32-decision.md) (RESOLVED 16 Oct): the sender-side ESP32
+  is **KEPT** — the master MCU that reads the PS2 controller (four-wire polled interface, PS2X
+  library) and transmits over Wi-Fi. Ticket 06's "sender ESP32 removed" cost saving is
+  **RETRACTED** (ticket 06 amendment 3; ADR 0002 amendment 2). Feasibility now argues the 2-ESP32
+  design: the sender ESP32 is an already-owned part (2x ESP32 inventory) and the glove hardware
+  (5x MPU6050 + flex sensor) is no longer needed. Committed chain: PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos. `t_send` stamps at
+  the sender's stick-read, so the unmeasured PS2X polling interval sits inside the latency path;
+  <= 200 ms stays a pre-registered target.
 
 ## Not yet specified
 
@@ -120,11 +130,6 @@ Settled during charting, before any ticket existed (no ticket carries these):
   photos, no firmware, no STL). The extended abstract states build steps in past tense — either
   build evidence lives outside these dirs (phone photos etc.) or the wording overstates. Only the
   team can settle this; HASIL DAN PEMBAHASAN wording depends on it.
-- Sender-side ESP32 kept or removed under the PS2 scheme (ticket 06 amendment 2). A PS2
-  controller needs a master MCU to read it, so ticket 06's "sender ESP32 removed" cost claim
-  cannot stand as written; re-decide before the Metodologi architecture and Feasibility argument
-  are written.
-
 ## Out of scope
 
 - Hardware modification before submission: no new sensors, no gripper redesign, no reprints. Whatever

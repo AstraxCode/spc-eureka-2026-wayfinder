@@ -1,9 +1,9 @@
-# Spec: SPC Eureka 2026 full paper — solution-framed repositioning-dingleberry
+# Spec: SPC Eureka 2026 full paper — solution-framed repositioning-archonx
 
 Status: ready-for-agent
 Effort: `.scratch/spc-full-paper/` (wayfinder map: all 7 tickets resolved 16 Oct 2026)
 Date: 16 Oct 2026 — team deadline 18 Oct 2026, official submission window 11–23 Oct 2026
-Source of truth: `map.md`, `issues/*.md`, `adr/*.md`, `research/*.md`, `claim-ledger-dingleberry.md`
+Source of truth: `map.md`, `issues/*.md`, `adr/*.md`, `research/*.md`, `claim-ledger-archonx.md`
 
 > This spec synthesises the decisions already settled in the wayfinder map and its tickets. It
 > introduces no new decisions. One item is deliberately left open and is marked **OPEN** below.
@@ -151,11 +151,15 @@ latency** (all three presume human teleoperation, which the PS2 pivot preserves)
 - Glove/IMU and any analog physical joystick: **zero mentions** anywhere in the paper.
 - Receiver side unchanged: **open-loop**, no encoders, no new sensors, PCA9685 + MG996R servos;
   precision comes from the operator-side mode plus firmware limits.
-- **OPEN — not decided:** whether a **sender-side ESP32** is retained. A PS2 controller needs a
-  master MCU to read it (PS2X library), so the earlier "sender ESP32 removed" cost claim cannot
-  stand as written, and the Feasibility argument depends on how this resolves. Ticket 06 amendment 2
-  carries this re-decision. Until it lands, the Metodologi architecture subsection and the cost
-  sentence cannot be finalised.
+- **Settled 16 Oct (ticket 09):** the **sender-side ESP32 is retained** — the master MCU that
+  reads the PS2 controller (four-wire polled interface; PS2X library) and transmits over Wi-Fi to
+  the receiver ESP32. Committed chain: PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos. The earlier "sender
+  ESP32 removed" cost claim is **retracted** (ticket 06 amendment 3); Feasibility now argues that
+  the sender ESP32 is an already-owned part (2x ESP32 inventory) and that the glove hardware (5x
+  MPU6050 + flex sensor) is no longer needed. The three control layers live in the sender ESP32's
+  firmware, not in an app. `t_send` is stamped at the sender's stick-read, so the PS2X polling
+  interval sits inside the measured one-way latency (identical in A and B); the polling rate is
+  unmeasured and no figure may be stated.
 
 ### Intervention specification
 
@@ -173,7 +177,7 @@ frames the software latch as a design contribution replacing the literature's ha
 
 ### Evidence rules (binding on drafting)
 
-- Every external claim carries a source; the claim ledger (`claim-ledger-dingleberry.md`) is the
+- Every external claim carries a source; the claim ledger (`claim-ledger-archonx.md`) is the
   gate. Nothing enters the paper that the ledger does not carry.
 - **Pre-registered targets only**: one-way latency ≤ 200 ms (already in the ledger as a
   pre-registered target) and placement error within one grid cell — the numeric grid value is
@@ -190,7 +194,7 @@ frames the software latch as a design contribution replacing the literature's ha
 - PDF, Bahasa Indonesia, Times New Roman 12 pt, 1.15 spacing, A4, 2.54 cm margins, 10–20 pages
   excluding cover/bibliography/appendices; filename `SPC_FullPaper_NamaKetuaTim.pdf`.
 - Template authority: `Full paper/Format Full Paper.docx`.
-- Watermark `-dingleberry` on the title and section headers (internal working convention).
+- Watermark `-archonx` on the title and section headers (internal working convention).
 
 ## Testing Decisions
 
@@ -227,7 +231,7 @@ rather than drafting style.
 ### Modules (artefacts) under check
 
 - The paper draft (primary artefact).
-- `claim-ledger-dingleberry.md` (the grounding gate).
+- `claim-ledger-archonx.md` (the grounding gate).
 - The wayfinder ticket answers + ADRs (the decision record the draft must not contradict).
 - The guidebook PDF (external authority; cited by page).
 
@@ -265,8 +269,9 @@ target**; placement error measured by phone photo against the marked grid; one-w
 - **Provisional-title discipline.** The title is the only unsettled paper-level decision. Draft
   freely, but keep the title in exactly one place so it can be replaced in one edit. It must not
   contain "aplikasi web" / "smartphone app".
-- **The sender-ESP32 OPEN item is the one genuine blocker** in this spec: it gates the Metodologi
-  architecture subsection and the Feasibility cost sentence. Everything else can be drafted now.
+- ~~**The sender-ESP32 OPEN item is the one genuine blocker** in this spec.~~ **Closed 16 Oct
+  (ticket 09):** the sender-side ESP32 is retained and the cost claim is retracted — see
+  "Control interface and architecture" above. No spec-level blocker remains except the title.
 - **Unverified price.** Rp40k–70k is a team estimate. A real wired-PS2 listing link should be
   captured before the figure enters the paper; otherwise keep the estimate label.
 - **Unsettled factual question for the team:** whether the arm physically exists as a *built*

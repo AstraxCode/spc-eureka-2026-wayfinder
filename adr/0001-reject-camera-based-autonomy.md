@@ -40,3 +40,6 @@ detection demo before the Final stage (28–29 Nov 2026); budget approval for ca
   The glove/IMU rejection stands — zero mentions in the paper. Camera autonomy remains the
   future-work paragraph, and the human-teleoperation premise that keeps all three metrics alive
   is unchanged.
+- AMENDED 2026-10-16 (ticket 09): the "sender ESP32 removed" clause in the Decision above is
+  RETRACTED — the sender-side ESP32 is retained (ticket 06 amendment 3; ADR 0002 amendment 2).
+  The Decision text is left as written because ADRs are append-only; nothing else in it is live.

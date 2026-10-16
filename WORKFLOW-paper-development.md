@@ -1,4 +1,4 @@
-# Workflow: SPC Eureka 2026 full paper → submission-dingleberry
+# Workflow: SPC Eureka 2026 full paper → submission-archonx
 
 Reference card for developing the full paper from the wayfinder map through to submission.
 Written 16 Oct 2026. Team deadline 18 Oct, official submission window 11–23 Oct 2026.
@@ -40,13 +40,13 @@ So: never jump from the map straight to writing the paper.
 
 | Thing | Path |
 |---|---|
-| Effort dir | `C:\Users\Arkandhafy\OneDrive\Documents\Claude's brain\Dingle's research\SPC Eureka 2026` |
+| Effort dir | `C:\Users\Arkandhafy\OneDrive\Documents\The Hivemind\Dingle's research\SPC Eureka 2026` |
 | Wayfinder map | `.scratch/spc-full-paper/map.md` |
 | Spec | `.scratch/spc-full-paper/spec.md` |
-| Tickets | `.scratch/spc-full-paper/issues/01..07-*.md` |
+| Tickets | `.scratch/spc-full-paper/issues/01..20-*.md` (01-07 wayfinder decisions, 08-20 drafting) |
 | ADRs | `.scratch/spc-full-paper/adr/0001-*.md`, `0002-*.md` |
 | Research findings | `.scratch/spc-full-paper/research/` |
-| Claim ledger (grounding gate) | `claim-ledger-dingleberry.md` |
+| Claim ledger (grounding gate) | `claim-ledger-archonx.md` |
 | Glossary (domain vocabulary) | `GLOSSARY.md` |
 | Paper template | `Full paper/Format Full Paper.docx` |
 | Tracker conventions | `docs/agents/issue-tracker.md` |
@@ -57,7 +57,7 @@ So: never jump from the map straight to writing the paper.
 
 ---
 
-## Current state (verified 16 Oct 2026, 16:45)
+## Current state (verified 16 Oct 2026, 16:45; updated 20:45)
 
 - All **7 of 7** wayfinder tickets `Status: resolved`. Ticket 04 (paper restructure) closed today,
   with the 15 Oct PS2 pivot recorded in it and in both ADRs.
@@ -67,6 +67,9 @@ So: never jump from the map straight to writing the paper.
   the two HITL decisions — sender-ESP32 and title; the nine mandatory sections; assemble+review).
   Blocking edges wired as text; frontier = **08, 09, 10, 12, 19**. On branch
   `to-tickets/paper-draft-2026-10-16`, **PR #2 open** (not merged — user decides).
+- **Drafting tickets resolved: 08** (GLOSSARY + domain wiring) **and 09** (sender-side ESP32
+  **KEPT**; the "sender ESP32 removed" cost claim **retracted** — ticket 06 amendment 3, ADR 0002
+  amendment 2). Committed chain: PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos. Frontier now **10, 11, 12, 19** (11 unblocked by 08).
 - `map.md` is still **`Status: open`**: the title is the one decision not made. That is deliberate —
   the map is not done while a decision is open, even though the effort is authorised to proceed.
 - GitHub mirror synced, `HEAD == origin/main` at `e596a50`. Issue #1 open, 1 comment.
@@ -116,7 +119,7 @@ Proposed breakdown (to be quizzed and approved before anything is published):
 
 **[INFERRED] The "wide refactor" exception applies to one thing.** `to-tickets` carves out
 mechanical changes whose blast radius fans across everything (rename a column → thousands of call
-sites) and sequences them **expand → contract**. The title and the `-dingleberry` watermark header
+sites) and sequences them **expand → contract**. The title and the `-archonx` watermark header
 convention are exactly that shape: they touch every header. Sequence them expand–contract — keep the
 title in **one place** now, substitute once at the very end. Already built into `spec.md`.
 
@@ -150,7 +153,7 @@ no docs pages, "can change or disappear without warning").
 `tdd` is red-green-refactor on tests. A paper has no test suite, so the feedback loop has to come
 from somewhere else:
 
-**`grounded-citations` + `claim-ledger-dingleberry.md` are the red test.** A claim with no source
+**`grounded-citations` + `claim-ledger-archonx.md` are the red test.** A claim with no source
 is red. You make it green by sourcing it *or* labelling it an explicitly pre-registered expectation.
 Never a third option. This is the single most important substitution in this doc — it is what keeps
 the disqualification risk (guidebook p. 5 item 7, fabrication) at zero.
@@ -159,7 +162,7 @@ the disqualification risk (guidebook p. 5 item 7, fabrication) at zero.
 
 Concept-build first, then write: read local notes for gaps, source the missing foundations into
 `RnD Scraping/`, then every technical claim carries a verified link. It also sets the house style
-(blunt/direct) and the `-dingleberry` watermark rule, and warns that **claims must match the
+(blunt/direct) and the `-archonx` watermark rule, and warns that **claims must match the
 decision records including later amendments** — drafting from a superseded ticket silently
 reintroduces a rejected design. That warning already bit once (the PS2 pivot went unrecorded in
 ticket 04 for a day).
@@ -232,11 +235,12 @@ collapse you already have.
 
 1. **The title.** Provisional. Blocks `Halaman Sampul`. Live as GitHub Issue #1, open on purpose so
    a teammate can propose.
-2. **Sender-side ESP32, kept or removed.** Ticket 06 amendment 2 lists it as a *pending
-   re-decision* and nobody re-decided it. A PS2 controller needs a master MCU to read it (PS2X
-   library), so ticket 06's original "sender ESP32 removed" cost saving cannot stand as written —
-   and Feasibility is 15% of the rubric. The pitch doc implies the sender is **kept**. Blocks
-   `Metodologi` and the cost sentence.
+2. ~~**Sender-side ESP32, kept or removed.**~~ — **DONE 16 Oct (ticket 09).** The sender-side
+   ESP32 is **KEPT**: it is the master MCU that reads the PS2 controller (PS2X). Ticket 06's
+   "sender ESP32 removed" cost saving is **retracted** (ticket 06 amendment 3; ADR 0002 amendment
+   2), and Feasibility now argues the 2-ESP32 design — the sender ESP32 is an already-owned part
+   and the glove hardware is no longer needed. The `Metodologi` architecture subsection and the
+   cost sentence are unblocked.
 
 Also unresolved, for the team: **does the arm physically exist as a built prototype?** No photos, no
 firmware, no STL anywhere in this tree, yet the Extended Abstract states build steps in past tense.
@@ -263,8 +267,8 @@ carrying that label, or after a real listing link is captured.
 
 1. Read `.scratch/spc-full-paper/map.md` first — the low-res view of every decision.
 2. Read `.scratch/spc-full-paper/spec.md` for the collapsed plan.
-3. `to-tickets` **done** — 13 tickets `issues/08..20` published (PR #2, awaiting merge). Work the
-   frontier (09, 10, 12, 19 — 08 resolved 16 Oct) blockers-first.
+3. `to-tickets` **done** — 13 tickets `issues/08..20` published (PR #2, awaiting merge). **08 and
+   09 resolved 16 Oct**; work the frontier **10, 11, 12, 19** blockers-first (11 unblocked by 08).
 4. Work tickets blockers-first with `implement`, each in a fresh context, grounded by the claim
    ledger.
 5. Re-sync the GitHub mirror after every session that edits the tracker.

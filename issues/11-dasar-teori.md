@@ -12,6 +12,6 @@ state the honesty caveat about smoothing.
       2024), and the filtering literature.
 - [ ] States explicitly that **no direct evidence was found that command smoothing alone improves
       placement accuracy** — smoothing is framed as a hypothesis, not a proven effect.
-- [ ] Every external claim maps to a sourced entry in `claim-ledger-dingleberry.md`; no unsourced
+- [ ] Every external claim maps to a sourced entry in `claim-ledger-archonx.md`; no unsourced
       number.
 - [ ] Uses GLOSSARY vocabulary; no "aplikasi web" / "smartphone app" wording.

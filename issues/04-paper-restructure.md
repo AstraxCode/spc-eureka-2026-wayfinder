@@ -8,7 +8,7 @@ Blocked by: 01, 02, 03
 
 Restructure the full paper around a solution rather than a comparison:
 
-- New title (keeping the `-dingleberry` watermark convention) and how the Indonesian abstract reads
+- New title (keeping the `-archonx` watermark convention) and how the Indonesian abstract reads
   once the contribution is an intervention, not a joystick-vs-glove finding.
 - Section-by-section plan: which existing sections survive, which are rewritten, where the
   radiation/accuracy background is retained verbatim in substance, where the old comparison data
@@ -114,7 +114,10 @@ Settled across interview rounds 1-2 (15 Oct) plus the 15 Oct PS2 amendment above
 **Carried forward (not blockers for this ticket):**
 
 - Final title -> GitHub Issue #1 and the drafting stage.
-- Sender-side ESP32 kept-or-removed -> ticket 06 amendment 2; must be settled before the
-  Metodologi architecture and the Feasibility argument are written.
+- ~~Sender-side ESP32 kept-or-removed -> ticket 06 amendment 2; must be settled before the
+  Metodologi architecture and the Feasibility argument are written.~~ **SETTLED 16 Oct (ticket 09):
+  the sender-side ESP32 is KEPT** — the master MCU that reads the PS2 controller. Ticket 06's
+  "sender ESP32 removed" cost claim is **retracted** (ticket 06 amendment 3; ADR 0002 amendment 2).
+  The restructure decisions above are unaffected.
 - Verified wired-PS2 listing price -> the team estimate Rp40k-70k stands only with its
   team-estimate label until a real listing link is captured.
