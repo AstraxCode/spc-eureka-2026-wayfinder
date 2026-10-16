@@ -15,6 +15,7 @@ clear. The destination:
 
 ```
 mindmap-rencana-konsep.png   ← visual mindmap of the whole concept plan (plain Indonesian)
+rencana-konsep.md            ← the same concept plan as plain text (recommended read)
 mindmap-rencana-konsep.svg   ← same, vector; .mmd = editable Mermaid source
 map.md            ← the map: destination, notes, decisions-so-far, open items (START HERE)
 issues/           ← one file per decision ticket (question + answer + comments history)
