@@ -170,6 +170,15 @@ Settled during charting, before any ticket existed (no ticket carries these):
   during the Final stage, and containing exactly one dedicated future-work paragraph on camera-based autonomy (ADR 0001) recording
   its design-stage rejection and three unblocking prerequisites without becoming a competing second plan. Prohibited strings check
   passed cleanly (0 matches). Unblocks 16 (Abstrak).
+- [Abstrak](issues/16-abstrak.md) (RESOLVED 17 Oct): drafted at `draft/16-abstrak-archonx.md`.
+  Written in exactly one continuous paragraph of 224 words (within the 150–250 word requirement in guidebook/template)
+  plus 5 alphabetical keywords (*faktor reduksi gain, lengan robot 5-DOF, mode posisi-halus, penanganan bahan radioaktif, teleoperasi stik PS2*).
+  Reframed around the solution: states the primary contribution as the operator-side fine-positioning intervention (*mode posisi-halus*)
+  via PS2 stick rate control and dual ESP32 architecture over Wi-Fi UDP, with trigger-activated gain reduction factor α (0 < α < 1)
+  and inherent *release-to-hold* natural locking; presents the 2×2 factorial design as a planned pre-registered validation protocol;
+  explicitly labels all result metrics (latency ≤ 200 ms, Euclidean error within 1 grid cell, 2s hold ≥ 80% success) as pre-registered
+  targets and theoretical design expectations in strict compliance with academic integrity (guidebook p. 5 item 7); confirms tabletop
+  open-loop bounds. Prohibited strings check passed cleanly (0 matches). Closes Load A sequence (12 → 13 → 14 → 15 → 16).
 
 ## Not yet specified
 
