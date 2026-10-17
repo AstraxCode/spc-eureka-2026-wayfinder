@@ -140,6 +140,15 @@ Settled during charting, before any ticket existed (no ticket carries these):
   the element attribution (S2 supports only "ionizing radiation") are removed, and the dose/DNA claims are
   carried from the ledger (C1/C2, C3). No new ledger entry needed. Drafting-load split recorded in
   `drafting-loads-archonx.md`.
+- [Metodologi](issues/13-metodologi.md) (RESOLVED 17 Oct): drafted at `draft/13-metodologi-archonx.md`.
+  Divided into three parts: (i) control architecture reflecting the committed ticket-09 chain (`PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos`),
+  with three firmware layers on sender ESP32 and open-loop operation on receiver ESP32 with power isolation;
+  (ii) intervention specification detailing trigger-toggled fine mode (gain reduction factor α) and release-to-hold
+  software latch as a cost-free alternative to literature hardware clutches; (iii) 2×2 validation protocol as a planned
+  pre-registered experimental design (40 trials/condition, 3 paired operators with fallback to 2, counterbalanced order,
+  project-defined 8-of-10 2-second-hold pass criterion, phone photo placement error measurement against millimeter grid).
+  Equations renumbered cleanly: eq (4) latency, eq (5) Euclidean placement error, eq (6) sample mean, eq (7) sample standard deviation.
+  Prohibited strings check passed cleanly. Unblocks 14.
 
 ## Not yet specified
 

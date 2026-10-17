@@ -78,7 +78,7 @@ So: never jump from the map straight to writing the paper.
   by 08; 17 is unblocked by 10).
 - GitHub mirror: `main` at `e596a50`; drafting branches `ticket-08` … `ticket-12` stacked on the
   unmerged `to-tickets/paper-draft-2026-10-16` (PR #2).
-- **Drafting tickets resolved: 08, 09, 10, 11 and 12.** Ticket 11 (Dasar Teori, 16 Oct) drafts the
+- **Drafting tickets resolved: 08, 09, 10, 11, 12, and 13.** Ticket 11 (Dasar Teori, 16 Oct) drafts the
   section at `.scratch/spc-full-paper/draft/11-dasar-teori-archonx.md` — rebuilt on motion scaling /
   hybrid position-rate control prior art with the smoothing caveat stated outright — and establishes the
   **drafting convention** `draft/NN-<slug>-archonx.md` for every remaining section ticket. It extended
@@ -86,7 +86,12 @@ So: never jump from the map straight to writing the paper.
   Section owns eqs (1)–(3); the latency/statistics equations renumber at tickets 13/14–20. Ticket 12
   (Pendahuluan, 16 Oct) is drafted at `draft/12-pendahuluan-archonx.md`; the frozen-boundary check passes
   and the user's 16 Oct C8 decision (strip the unsourced failure chain and the element attribution) is
-  applied. Frontier now **13, 17, 19**.
+  applied. Ticket 13 (Metodologi, 17 Oct) is drafted at `draft/13-metodologi-archonx.md` across three parts:
+  control architecture reflecting the committed chain `PS2 controller → sender ESP32 (PS2X) → Wi-Fi → receiver ESP32 → PCA9685 → MG996R servos`
+  with three sender-side firmware layers and open-loop receiver; trigger-toggled fine mode intervention with
+  release-to-hold latch; and 2×2 validation protocol as a planned pre-registered protocol (40 trials/cond,
+  3 paired ops, counterbalanced order, 8-of-10 2s-hold project-defined criterion, phone photo grid measurement).
+  Eqs (4)–(7) established. Frontier now **14** (for Load A) alongside **17, 19** (Load B).
 - **Two-agent load split (16 Oct, user direction):** the remaining drafting tickets are split in
   `.scratch/spc-full-paper/drafting-loads-archonx.md` — **Load A** (archonx01) = the paper body, one
   voice: 13 → 14 → 15 → 16; **Load B** (archonx) = front/back matter + packaging: 17 → 19 → 18 → 20.
