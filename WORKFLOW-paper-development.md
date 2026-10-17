@@ -78,7 +78,7 @@ So: never jump from the map straight to writing the paper.
   by 08; 17 is unblocked by 10).
 - GitHub mirror: `main` at `e596a50`; drafting branches `ticket-08` … `ticket-12` stacked on the
   unmerged `to-tickets/paper-draft-2026-10-16` (PR #2).
-- **Drafting tickets resolved: 08, 09, 10, 11, 12, 13, and 14.** Ticket 11 (Dasar Teori, 16 Oct) drafts the
+- **Drafting tickets resolved: 08, 09, 10, 11, 12, 13, 14, 15, and 16.** Ticket 11 (Dasar Teori, 16 Oct) drafts the
   section at `.scratch/spc-full-paper/draft/11-dasar-teori-archonx.md` — rebuilt on motion scaling /
   hybrid position-rate control prior art with the smoothing caveat stated outright — and establishes the
   **drafting convention** `draft/NN-<slug>-archonx.md` for every remaining section ticket. It extended
@@ -104,12 +104,19 @@ So: never jump from the map straight to writing the paper.
   open-loop constraints, academic integrity adherence regarding pre-registered targets (≤ 200 ms latency, 1 grid cell error,
   2s hold at ≥ 8/10 success rate) and theoretical expectations, recommends full empirical execution of the 2×2 protocol
   for the Final stage, and contains exactly one dedicated future-work paragraph on camera-based autonomy (ADR 0001) recording
-  its design-stage rejection and three unblocking prerequisites. Frontier now **16** (Abstrak, for Load A) alongside **18** (Load B).
+  its design-stage rejection and three unblocking prerequisites. Ticket 16 (Abstrak, 17 Oct) is drafted at
+  `draft/16-abstrak-archonx.md`: written in exactly one single continuous paragraph of 224 words (strictly within
+  the 150–250 word requirement in guidebook/template) plus 5 alphabetical keywords (*faktor reduksi gain, lengan robot 5-DOF,
+  mode posisi-halus, penanganan bahan radioaktif, teleoperasi stik PS2*). Frames the contribution around the fine-positioning
+  intervention (*mode posisi-halus*) via PS2 stick rate control and dual ESP32 over Wi-Fi UDP with trigger-toggled gain reduction α
+  and inherent *release-to-hold* natural locking; presents the 2×2 protocol as planned pre-registered validation; and explicitly
+  labels all metrics as pre-registered targets and theoretical expectations under guidebook p. 5 item 7 academic integrity.
+  This **completes Load A in full** (12 → 13 → 14 → 15 → 16). Frontier now moves to Load B for Ticket 18 (Daftar Pustaka) and Ticket 20 (Assemble, review, package).
 - **Two-agent load split (16 Oct, user direction):** the remaining drafting tickets are split in
   `.scratch/spc-full-paper/drafting-loads-archonx.md` — **Load A** (archonx01) = the paper body, one
-  voice: 13 → 14 → 15 → 16; **Load B** (archonx) = front/back matter + packaging: 17 → 19 → 18 → 20.
+  voice: 13 → 14 → 15 → 16 (ALL COMPLETED); **Load B** (archonx) = front/back matter + packaging: 17 → 19 → 18 → 20.
   `map.md`, `claim-ledger-archonx.md` and this card stay Load A's to edit.
-- Backups: `.scratch/_backups/spc-full-paper-20261017-1450/` (pre-ticket-15), `…-1434/` (pre-ticket-14), `…-2158/` (pre-ticket-11), `…-2147/` (pre-ticket-10).
+- Backups: `.scratch/_backups/spc-full-paper-20261017-1505/` (pre-ticket-16), `…-1450/` (pre-ticket-15), `…-1434/` (pre-ticket-14), `…-2158/` (pre-ticket-11), `…-2147/` (pre-ticket-10).
 
 ---
 
