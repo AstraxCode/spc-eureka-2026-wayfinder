@@ -149,6 +149,17 @@ Settled during charting, before any ticket existed (no ticket carries these):
   project-defined 8-of-10 2-second-hold pass criterion, phone photo placement error measurement against millimeter grid).
   Equations renumbered cleanly: eq (4) latency, eq (5) Euclidean placement error, eq (6) sample mean, eq (7) sample standard deviation.
   Prohibited strings check passed cleanly. Unblocks 14.
+- [Hasil dan Pembahasan](issues/14-hasil-dan-pembahasan.md) (RESOLVED 17 Oct): drafted at `draft/14-hasil-dan-pembahasan-archonx.md`.
+  Divided into four parts: (i) explicit top-of-section labelling statement establishing that all metrics and analyses are pre-registered
+  targets and engineering design expectations, directly citing the guidebook academic integrity rule (p. 5 item 7: fabrication = disqualification)
+  and the 18 Oct prototype build milestone; (ii) pre-registered targets table (Tabel 1) specifying one-way latency ≤ 200 ms (UDP Wi-Fi 2.4 GHz,
+  evaluated via Eq 4), Euclidean placement error within 1 grid cell (Eq 5), project-defined 2-second hold (8/10 trials), and expected
+  variance reduction in Condition B vs Condition A (Eqs 6–7); (iii) expected-outcome analysis evaluating fine-mode gain reduction α
+  against operator hunting (Richter et al. 2019, Han & Yang 2022), release-to-hold natural locking without mechanical clutches, and
+  Wi-Fi propagation and latency jitter dynamics (Akl et al. 2006, Pandey & Parasuraman 2021); (iv) honest-limits subsection affirming
+  tabletop proof-of-concept bounds using 30 mm foam blocks with explicit rejection of real nuclear fuel rod handling (IAEA-TECDOC-1433,
+  IAEA Radiation), open-loop mechanical limitations (PCA9685, MG996R backlash/compliance), and zero physical measurements prior to 18 Oct.
+  Prohibited strings check passed cleanly. Unblocks 15.
 
 ## Not yet specified
 
@@ -160,12 +171,11 @@ Settled during charting, before any ticket existed (no ticket carries these):
   ticket-04 restructure decision is settled.
 - Verified wired-PS2 listing price: team estimate is Rp40k-70k (16 Oct); a real listing link
   should be captured before the figure enters the paper.
+- Physical prototype status and data boundary — **RESOLVED 17 Oct (ticket 14):** Hasil dan Pembahasan
+  adopts the strict honest-limits convention: all results are explicitly labelled as pre-registered
+  targets and theoretical expectations; physical testing is scheduled for 18 Oct for the Final stage;
+  zero empirical measurements are fabricated, complying with guidebook p. 5 item 7.
 
-
-- Whether the arm physically exists as a BUILT prototype: no digital evidence in either tree (no
-  photos, no firmware, no STL). The extended abstract states build steps in past tense — either
-  build evidence lives outside these dirs (phone photos etc.) or the wording overstates. Only the
-  team can settle this; HASIL DAN PEMBAHASAN wording depends on it.
 ## Out of scope
 
 - Hardware modification before submission: no new sensors, no gripper redesign, no reprints. Whatever

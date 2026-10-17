@@ -78,7 +78,7 @@ So: never jump from the map straight to writing the paper.
   by 08; 17 is unblocked by 10).
 - GitHub mirror: `main` at `e596a50`; drafting branches `ticket-08` … `ticket-12` stacked on the
   unmerged `to-tickets/paper-draft-2026-10-16` (PR #2).
-- **Drafting tickets resolved: 08, 09, 10, 11, 12, and 13.** Ticket 11 (Dasar Teori, 16 Oct) drafts the
+- **Drafting tickets resolved: 08, 09, 10, 11, 12, 13, and 14.** Ticket 11 (Dasar Teori, 16 Oct) drafts the
   section at `.scratch/spc-full-paper/draft/11-dasar-teori-archonx.md` — rebuilt on motion scaling /
   hybrid position-rate control prior art with the smoothing caveat stated outright — and establishes the
   **drafting convention** `draft/NN-<slug>-archonx.md` for every remaining section ticket. It extended
@@ -91,12 +91,19 @@ So: never jump from the map straight to writing the paper.
   with three sender-side firmware layers and open-loop receiver; trigger-toggled fine mode intervention with
   release-to-hold latch; and 2×2 validation protocol as a planned pre-registered protocol (40 trials/cond,
   3 paired ops, counterbalanced order, 8-of-10 2s-hold project-defined criterion, phone photo grid measurement).
-  Eqs (4)–(7) established. Frontier now **14** (for Load A) alongside **17, 19** (Load B).
+  Eqs (4)–(7) established. Ticket 14 (Hasil dan Pembahasan, 17 Oct) is drafted at `draft/14-hasil-dan-pembahasan-archonx.md`
+  across four parts: explicit top-of-section labelling statement establishing that all metrics and analyses are pre-registered
+  targets and design expectations (citing guidebook p. 5 item 7 disqualification rule and 18 Oct prototype build milestone);
+  pre-registered targets table (Tabel 1) specifying one-way latency ≤ 200 ms (Eq 4), Euclidean placement error within 1 grid cell (Eq 5),
+  project-defined 2-second hold (8/10 trials), and variance reduction; expected-outcome analysis of fine-mode gain reduction α and
+  release-to-hold under rate control; and honest-limits subsection affirming tabletop POC boundaries (30 mm foam blocks vs real spent
+  nuclear fuel per IAEA-TECDOC-1433/Radiation), strictly open-loop limitations (PCA9685/MG996R), and zero physical measurements
+  prior to 18 Oct. Frontier now **15** (for Load A) alongside **18** (Load B).
 - **Two-agent load split (16 Oct, user direction):** the remaining drafting tickets are split in
   `.scratch/spc-full-paper/drafting-loads-archonx.md` — **Load A** (archonx01) = the paper body, one
   voice: 13 → 14 → 15 → 16; **Load B** (archonx) = front/back matter + packaging: 17 → 19 → 18 → 20.
   `map.md`, `claim-ledger-archonx.md` and this card stay Load A's to edit.
-- Backups: `.scratch/_backups/spc-full-paper-20261016-2158/` (pre-ticket-11), `…-2147/` (pre-ticket-10).
+- Backups: `.scratch/_backups/spc-full-paper-20261017-1434/` (pre-ticket-14), `…-2158/` (pre-ticket-11), `…-2147/` (pre-ticket-10).
 
 ---
 
