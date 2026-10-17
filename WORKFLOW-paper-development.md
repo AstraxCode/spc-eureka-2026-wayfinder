@@ -98,12 +98,18 @@ So: never jump from the map straight to writing the paper.
   project-defined 2-second hold (8/10 trials), and variance reduction; expected-outcome analysis of fine-mode gain reduction α and
   release-to-hold under rate control; and honest-limits subsection affirming tabletop POC boundaries (30 mm foam blocks vs real spent
   nuclear fuel per IAEA-TECDOC-1433/Radiation), strictly open-loop limitations (PCA9685/MG996R), and zero physical measurements
-  prior to 18 Oct. Frontier now **15** (for Load A) alongside **18** (Load B).
+  prior to 18 Oct. Ticket 15 (Kesimpulan dan Saran, 17 Oct) is drafted at `draft/15-kesimpulan-dan-saran-archonx.md`:
+  restates the operator-side fine-positioning intervention (gain reduction factor α, release-to-hold natural lock),
+  tabletop proof-of-concept bounds (30 mm foam blocks vs real spent nuclear fuel rods per IAEA-TECDOC-1433/Radiation),
+  open-loop constraints, academic integrity adherence regarding pre-registered targets (≤ 200 ms latency, 1 grid cell error,
+  2s hold at ≥ 8/10 success rate) and theoretical expectations, recommends full empirical execution of the 2×2 protocol
+  for the Final stage, and contains exactly one dedicated future-work paragraph on camera-based autonomy (ADR 0001) recording
+  its design-stage rejection and three unblocking prerequisites. Frontier now **16** (Abstrak, for Load A) alongside **18** (Load B).
 - **Two-agent load split (16 Oct, user direction):** the remaining drafting tickets are split in
   `.scratch/spc-full-paper/drafting-loads-archonx.md` — **Load A** (archonx01) = the paper body, one
   voice: 13 → 14 → 15 → 16; **Load B** (archonx) = front/back matter + packaging: 17 → 19 → 18 → 20.
   `map.md`, `claim-ledger-archonx.md` and this card stay Load A's to edit.
-- Backups: `.scratch/_backups/spc-full-paper-20261017-1434/` (pre-ticket-14), `…-2158/` (pre-ticket-11), `…-2147/` (pre-ticket-10).
+- Backups: `.scratch/_backups/spc-full-paper-20261017-1450/` (pre-ticket-15), `…-1434/` (pre-ticket-14), `…-2158/` (pre-ticket-11), `…-2147/` (pre-ticket-10).
 
 ---
 
