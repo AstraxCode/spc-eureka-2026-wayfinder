@@ -10,9 +10,9 @@
 
 [5] H. Lee, J. Han, dan G.-H. Yang, "Development of variable scaling teleoperation framework for improving teleoperation performance," *International Journal of Control, Automation and Systems*, vol. 22, no. 3, hlm. 936–945, 2024. doi: 10.1007/s12555-022-1099-z. [Daring]. Tersedia: https://link.springer.com/article/10.1007/s12555-022-1099-z
 
-[6] J. Yoon, S. Lee, H. Kim, dan S. Oh, "A single scale doesn't fit all: Adaptive motion scaling for efficient and precise teleoperation," arXiv:2503.01216v1, 2025. [Daring]. Tersedia: https://arxiv.org/abs/2503.01216v1
+[6] J. Yoon, S. Park, H. Park, C. Kim, S. Park, dan M. Hwang, "A single scale doesn't fit all: Adaptive motion scaling for efficient and precise teleoperation," arXiv:2503.01216v1, 2025. [Daring]. Tersedia: https://arxiv.org/abs/2503.01216v1
 
-[7] Z. Wang, Y. Zhang, dan X. Zhang, "A comparative study on human motion smoothing filters for RGB-D camera teleoperation," dalam *Proc. 2024 30th Int. Conf. Mechatronics Mach. Vision Pract. (M2VIP)*, 2024, hlm. 1–6. doi: 10.1109/M2VIP61509.2024.10746144. [Daring]. Tersedia: https://ieeexplore.ieee.org/abstract/document/10746144
+[7] Z. Wang, Y. Zhang, dan X. Zhang, "A comparative study on human motion smoothing filters for RGB-D camera teleoperation," dalam *Proc. 2024 30th Int. Conf. Mechatronics Mach. Vision Pract. (M2VIP)*, 2024, hlm. 1–6. [Daring]. Tersedia: https://ieeexplore.ieee.org/abstract/document/10746144
 
 [8] R. Akl, D. Tummala, dan X. Li, "Indoor propagation modeling at 2.4 GHz for IEEE 802.11 networks," Department of Computer Science and Engineering, University of North Texas, Denton, TX, Tech. Rep., 2006. [Daring]. Tersedia: https://digital.library.unt.edu/ark:/67531/metadc30827/m2/1/high_res_d/Akl-2006-Indoor_Propagation_Modeling_at_2.4.pdf
 
