@@ -160,6 +160,16 @@ Settled during charting, before any ticket existed (no ticket carries these):
   tabletop proof-of-concept bounds using 30 mm foam blocks with explicit rejection of real nuclear fuel rod handling (IAEA-TECDOC-1433,
   IAEA Radiation), open-loop mechanical limitations (PCA9685, MG996R backlash/compliance), and zero physical measurements prior to 18 Oct.
   Prohibited strings check passed cleanly. Unblocks 15.
+- [Kesimpulan dan Saran](issues/15-kesimpulan-dan-saran.md) (RESOLVED 17 Oct): drafted at `draft/15-kesimpulan-dan-saran-archonx.md`.
+  Divided into two main sections: (i) Kesimpulan, restating the operator-side fine-positioning intervention (*mode posisi-halus*)
+  via PS2 stick rate control and dual ESP32 architecture, elimination of mechanical clutches via *release-to-hold*, strict tabletop
+  proof-of-concept boundaries (30 mm synthetic foam blocks vs real spent nuclear fuel rods per IAEA-TECDOC-1433 / IAEA Radiation),
+  open-loop limitations, and reiteration of academic integrity adherence by presenting pre-registered targets (latency ≤ 200 ms,
+  placement error within 1 grid cell, 2-second hold at ≥ 8/10 success rate) and theoretical expectations rather than fabricated
+  data before 18 Oct 2026; (ii) Saran dan Pengembangan Selanjutnya, recommending full empirical execution of the 2×2 protocol
+  during the Final stage, and containing exactly one dedicated future-work paragraph on camera-based autonomy (ADR 0001) recording
+  its design-stage rejection and three unblocking prerequisites without becoming a competing second plan. Prohibited strings check
+  passed cleanly (0 matches). Unblocks 16 (Abstrak).
 
 ## Not yet specified
 
