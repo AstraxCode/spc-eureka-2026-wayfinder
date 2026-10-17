@@ -40,22 +40,22 @@ strips the internal `-archonx` watermark from headings and prose (the cover uses
 `TITLE_SUBMISSION` from `title.md`), and renders the docx on the official template's page setup.
 It is deterministic: re-running it reproduces the same document from the drafts.
 
-### Verified state (28 pages total)
+### Verified state (29 pages total)
 
 Measured from the artefacts, not estimated:
 
 - **Body length 17 pages** (Abstrak p. 2 → end of Kesimpulan dan Saran p. 18), excluding cover,
-  Daftar Pustaka (p. 19) and Lampiran (pp. 20–28). Guidebook limit 10–20. PASS.
+  Daftar Pustaka (pp. 19–20) and Lampiran (pp. 21–29). Guidebook limit 10–20. PASS.
 - **Page geometry:** A4 21.0 × 29.7 cm, margins L/R/T/B exactly 2.54 cm, body Times New Roman
   12 pt, 1.15 line spacing, centred page number from p. 2 (cover suppressed). PASS.
 - **Nine sections in guidebook order:** Halaman Sampul → Abstrak → Pendahuluan → Dasar Teori →
   Metodologi → Hasil dan Pembahasan → Kesimpulan dan Saran → Daftar Pustaka → Lampiran. PASS.
-- **Fonts:** 555 TNR runs, 109 Courier New runs (code/diagram blocks only), 48 Cambria Math runs
+- **Fonts:** 536 TNR runs, 115 Courier New runs (code/diagram blocks only), 48 Cambria Math runs
   (equations (1)–(7)). No other font in the document. PASS.
 - **Forbidden content:** 0 hits for glove / sarung tangan / IMU / MPU6050 / flex sensor;
   0 hits for aplikasi web / antarmuka web / web joystick / Blynk / smartphone / ponsel pintar;
   0 hits for joystick analog / stik analog fisik; 0 residual `-archonx`. PASS.
-- **Citations:** bracketed numbers [1]–[10] contiguous, all ten present in the bibliography, no
+- **Citations:** bracketed numbers [1]–[11] contiguous, all eleven present in the bibliography, no
   orphans, no gaps. PASS.
 - **Abstract:** one paragraph, 224 words, 5 alphabetical keywords. PASS.
 - **Captions:** every table numbered and captioned in 10 pt italic above the table — Tabel 1
@@ -120,6 +120,14 @@ three review claims were wrong and are recorded as rejected below.
     "Paket UDP (2,4 GHz)" — the latency argument only holds for one committed transport.
 16. Budget prices carry an explicit scope line ("seluruh harga merupakan perkiraan tim per Oktober
     2026 yang belum diverifikasi terhadap tautan pemasok"), not just the PS2 row.
+17. **[11] LimpSquid "Robotic arm" Thingiverse citation added & verified.** Sourced original CC BY-NC 4.0
+    provenance for the 5-DOF mechanical arm ("proyek Wonder Tiger" retained as team project nickname in prose),
+    cited in Lampiran (Tabel 2 & Tabel 4), added as entry [11] in Daftar Pustaka with verified live URLs.
+18. **Draft 13 citation cluster whitespace normalized.** Fixed `latensi komunikasi.[8],[9]` to `[8], [9]`.
+19. **Checkscript updated.** Citation contiguous check updated from `range(1, 11)` to `range(1, 12)` ([1]–[11]).
+20. **Visual verification pass completed.** Rendered pages p10 (Metodologi [8], [9]), p19 (Daftar Pustaka [1]–[10]),
+    p20 (Daftar Pustaka [11]), p21 (Lampiran Tabel 2 credit), and p23 (Lampiran Tabel 4 spec credit) visually inspected
+    via `vision_analyze`; all confirmed clean with no formatting defects.
 
 **Recorded for Load A (`archonx01`) — body drafts 11–16, not edited by Load B:**
 
@@ -174,7 +182,8 @@ three review claims were wrong and are recorded as rejected below.
 
 ### Downstream actions for the Load A owner (shared files)
 
-- `claim-ledger-archonx.md`: mark **S5** and **S6** as `SUPERSEDED (antarmuka sarung tangan
+- `claim-ledger-archonx.md`: add **S14** (LimpSquid, "Robotic arm", Thingiverse, 2016, CC BY-NC 4.0;
+  licence attribution requirement for 5-DOF 3D printed arm). Mark **S5** and **S6** as `SUPERSEDED (antarmuka sarung tangan
   ditinggalkan)`; the paper no longer cites them.
 - Budget basis: the ten component prices in Tabel 3 now carry a team-estimate scope line, but the
   ledger holds only C12 (PS2, Rp40k–70k) and C13 (ESP32s owned). Add one ledger entry for the

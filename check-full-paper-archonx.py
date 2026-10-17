@@ -131,7 +131,7 @@ cite_text = prose_text + "\n" + "\n".join(
 )
 nums = sorted({int(x) for x in re.findall(r"\[(\d+)\]", cite_text)})
 print("bracket numbers found:", nums)
-check(nums == list(range(1, 11)), f"citation numbers [1]-[10] contiguous ({nums})")
+check(nums == list(range(1, 12)), f"citation numbers [1]-[11] contiguous ({nums})")
 
 print("\n=== CATEGORY CHECKS ===")
 checks = {
