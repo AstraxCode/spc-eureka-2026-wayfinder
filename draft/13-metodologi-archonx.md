@@ -4,8 +4,8 @@ Bab ini menguraikan metodologi perancangan dan validasi sistem teleoperasi lenga
 Pemaparan dibagi menjadi tiga bagian utama: (i) arsitektur sistem kendali teleoperasi dari pengirim
 hingga aktuator, (ii) spesifikasi intervensi kendali mode posisi-halus dan penguncian posisi saat tuas
 netral, serta (iii) protokol eksperimen validasi 2×2 yang dirancang sebagai rencana pengujian pra-registrasi.
-Seluruh variabel, target kuantitatif, dan batas kriteria pada bab ini dipetakan secara ketat ke dokumen
-`claim-ledger-archonx.md`.
+Seluruh variabel, target kuantitatif, dan batas kriteria pada bab ini dinyatakan sebagai target
+pra-registrasi tim, bukan angka hasil pengukuran.
 
 ## Arsitektur sistem kendali teleoperasi-archonx
 
@@ -89,7 +89,7 @@ Dengan nilai α yang berada pada rentang 0 < α < 1 (ditetapkan sebagai paramete
 tuas stik yang sama akan menghasilkan perubahan sudut sendi yang jauh lebih kecil. Penurunan rasio gerak ini
 memberikan resolusi spasial yang lebih tinggi bagi operator untuk melakukan penyesuaian akhir di atas area
 sasaran, merujuk pada prinsip penskalaan gerak yang terbukti mereduksi galat penempatan pada studi teleoperasi
-terdahulu.[4],[3]
+terdahulu [3], [4].
 
 ### 2. Perilaku tahan setelah pelepasan (release-to-hold)-archonx
 
@@ -100,8 +100,8 @@ secara otomatis mengembalikan tuas ke posisi tengah netral (u = 0), yang secara 
 perintah laju nol.
 
 Pada saat kondisi u = 0 terdeteksi, *firmware* menahan nilai sudut acuan terakhir (θ_ref = θ_terakhir) dan
-mengunci keluaran register PWM pada sudut tersebut. Manipulator berhenti seketika di posisi terakhir tanpa
-mengalami pergeseran (*drift*). Dalam penelitian ini, perilaku perangkat lunak *release-to-hold* diajukan
+mengunci keluaran register PWM pada sudut tersebut. Manipulator dirancang berhenti pada posisi terakhir
+tanpa memerlukan mekanisme tambahan; ada tidaknya pergeseran (*drift*) diukur pada tahap Final. Dalam penelitian ini, perilaku perangkat lunak *release-to-hold* diajukan
 sebagai kontribusi desain berbiaya nol yang menggantikan fungsi kopling perangkat keras (*hardware clutch*)
 yang lazim digunakan pada instrumen *master telemanipulator* konvensional.
 
@@ -136,7 +136,7 @@ Protokol eksperimen mengevaluasi interaksi antara dua faktor perlakuan independe
 
 Pemilihan jarak 1 meter dan 3 meter didasarkan pada landasan fisika propagasi gelombang elektromagnetik
 dalam ruangan: daya sinyal nirkabel berkurang secara logaritmik terhadap jarak dan meningkatkan sebaran
-latensi komunikasi.[8],[9]
+latensi komunikasi.[8], [9]
 
 ### 2. Partisipan operator dan mitigasi bias pembelajaran-archonx
 
@@ -153,7 +153,8 @@ urutan jarak pengujian secara silang.
 ### 3. Prosedur uji dan kriteria keberhasilan tahan 2 detik-archonx
 
 Tugas eksperimental yang dilakukan adalah memindahkan balok busa berdensitas seragam (ukuran 30 mm × 30 mm × 30 mm,
-massa ±15 gram) dari titik awal tetap menuju zona target pada papan kisi koordinat berjarak milimeter.
+massa ±15 gram — spesifikasi desain yang ditetapkan saat perakitan) dari titik awal tetap menuju zona
+target pada papan kisi koordinat berjarak milimeter.
 
 Setiap operator melakukan **40 kali pengulangan percobaan (*trials*) per kondisi per jarak**. Total percobaan
 yang direncanakan adalah 3 operator × 4 sel kondisi × 40 pengulangan = 480 titik data uji.
@@ -161,7 +162,9 @@ yang direncanakan adalah 3 operator × 4 sel kondisi × 40 pengulangan = 480 tit
 Kriteria keberhasilan penempatan dievaluasi berdasarkan **kriteria tahan 2 detik (*2-second hold criterion*)**:
 penempatan dinyatakan berhasil (*pass*) jika balok busa mampu bertahan stabil di atas target sasaran selama
 minimal 2 detik tanpa tergelincir, jatuh, atau mengalami pergeseran posisi akibat osilasi lengan. Ambang batas
-keberhasilan operasional ditetapkan sebesar **minimal 8 dari 10 percobaan sukses** pada setiap sesi pengujian.
+keberhasilan operasional ditetapkan sebesar **minimal 8 dari 10 percobaan sukses** pada setiap blok 10
+percobaan. Setiap sel pengujian terdiri atas empat blok (40 percobaan), sehingga satu sel dinyatakan lulus
+bila sekurang-kurangnya 32 dari 40 percobaan (80%) berhasil.
 Kriteria ini merupakan metrik keberhasilan yang dirumuskan secara internal oleh proyek (*project-defined criterion*),
 dan tidak diposisikan sebagai metrik standar telemanipulasi industri.
 
@@ -196,7 +199,8 @@ Keterangan:
 
 Pengukuran koordinat (x_final, y_final) dilakukan secara objektif melalui pemotretan resolusi tinggi
 menggunakan kamera ponsel cerdas dengan sudut tegak lurus (*perpendicular top-down photo*) terhadap papan kisi
-terkalibrasi, kemudian dianalisis terhadap garis acuan kisi berketelitian 0,5 mm. Target performa pra-registrasi
+terkalibrasi, kemudian dianalisis terhadap garis acuan kisi berketelitian 0,5 mm (spesifikasi instrumen yang ditetapkan
+saat perakitan). Target performa pra-registrasi
 yang dipatok adalah galat penempatan akhir berada di dalam batas toleransi satu sel kisi uji.
 
 #### c. Analisis statistik data-archonx

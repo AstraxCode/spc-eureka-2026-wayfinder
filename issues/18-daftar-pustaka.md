@@ -15,15 +15,15 @@
 ## Answer
 
 **Resolved 2026-10-17 (ArchonX).** Draft: `.scratch/spc-full-paper/draft/18-daftar-pustaka-archonx.md`
-(10 numbered entries, IEEE style per `Full paper/Format Full Paper.docx`, `-archonx` on every header,
+(11 numbered entries, IEEE style per `Full paper/Format Full Paper.docx`, `-archonx` on every header,
 scaffolding section detailing claim mapping and ledger alignment).
 
 ### Citation numbering & appearance order
 
 All upstream citing sections (11, 12, 13, 14, 15) are `resolved`. An automated audit across the full text
-reveals that citations appear in strictly contiguous order [1] through [10] across sections 12 (Pendahuluan)
-and 11 (Dasar Teori), with subsequent sections (13 Metodologi, 14 Hasil dan Pembahasan) re-citing within
-this closed set:
+reveals that citations appear in strictly contiguous order [1] through [11] across sections 12 (Pendahuluan),
+11 (Dasar Teori), and Lampiran (Tabel 2 & Tabel 4), with subsequent sections (13 Metodologi, 14 Hasil dan Pembahasan)
+re-citing within this closed set:
 
 1. `[1]` = IAEA, *Radiation, People and the Environment* (2004) — First cited in Pendahuluan (lines 8, 11).
    Supports C1 (dose limits) and C2 (DNA ionizing radiation risk). Ledger source: **S2**.
@@ -45,12 +45,15 @@ this closed set:
    Supports C6 (Wi-Fi latency and jitter distributions in mobile robotics). Ledger source: **S4**.
 10. `[10]` = B. Porter, *madsci1016/Arduino-PS2X* (ported for ESP32 by *MyArduinoLib*) — First cited in Dasar Teori (line 137).
     Supports C11 (PS2 four-wire synchronous polling protocol requiring sender MCU). Ledger source: **S8**.
+11. `[11]` = LimpSquid, "Robotic arm" (seri cetak 3D: gripper thing:1748596; turntable thing:1750025; arm thing:1838120), Thingiverse, 2016. Lisensi CC BY-NC 4.0. First cited in Lampiran (Tabel 2 & Tabel 4).
+    Atribusi lisensi desain rujukan struktur mekanis 5-DOF (proyek Wonder Tiger; desainer asal LimpSquid). Ledger source: **S14** (staged for archonx01).
 
 ### Claim ledger reconciliation (staged for assembly / Load A)
 
 Per Load B shared-file discipline, `claim-ledger-archonx.md` is read-only for `archonx`. The following audit is recorded here for assembly at Ticket 20:
 
 - **11 active external claims cited:** C1, C2, C3, C5, C6, C11, C14, C15, C16, C17, C18 are 100% cited in the draft text and map directly to entries `[1]`–`[10]`.
+- **`[11]` is a licence attribution obligation:** CC BY-NC 4.0 requires attribution to the original designer (LimpSquid). Staged for archonx01 to add **S14** to `claim-ledger-archonx.md`.
 - **C4:** Contradicted in ledger; reframed as an intentional scope limitation (no citation).
 - **C8:** Removed per user decision on 16 Oct (unsupported causal chain).
 - **C9, C10, C12, C13:** C9 was the initial glove hypothesis (eliminated); C10 is the team's experimental test protocol; C12/C13 are team budget estimates and inventory. None requires an external bibliographic citation.

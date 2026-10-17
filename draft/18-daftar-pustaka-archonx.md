@@ -10,15 +10,17 @@
 
 [5] H. Lee, J. Han, dan G.-H. Yang, "Development of variable scaling teleoperation framework for improving teleoperation performance," *International Journal of Control, Automation and Systems*, vol. 22, no. 3, hlm. 936–945, 2024. doi: 10.1007/s12555-022-1099-z. [Daring]. Tersedia: https://link.springer.com/article/10.1007/s12555-022-1099-z
 
-[6] J. Yoon, S. Lee, H. Kim, dan S. Oh, "A single scale doesn't fit all: Adaptive motion scaling for efficient and precise teleoperation," arXiv:2503.01216v1, 2025. [Daring]. Tersedia: https://arxiv.org/abs/2503.01216v1
+[6] J. Yoon, S. Park, H. Park, C. Kim, S. Park, dan M. Hwang, "A single scale doesn't fit all: Adaptive motion scaling for efficient and precise teleoperation," arXiv:2503.01216v1, 2025. [Daring]. Tersedia: https://arxiv.org/abs/2503.01216v1
 
-[7] Z. Wang, Y. Zhang, dan X. Zhang, "A comparative study on human motion smoothing filters for RGB-D camera teleoperation," dalam *Proc. 2024 30th Int. Conf. Mechatronics Mach. Vision Pract. (M2VIP)*, 2024, hlm. 1–6. doi: 10.1109/M2VIP61509.2024.10746144. [Daring]. Tersedia: https://ieeexplore.ieee.org/abstract/document/10746144
+[7] Z. Wang, Y. Zhang, dan X. Zhang, "A comparative study on human motion smoothing filters for RGB-D camera teleoperation," dalam *Proc. 2024 30th Int. Conf. Mechatronics Mach. Vision Pract. (M2VIP)*, 2024, hlm. 1–6. [Daring]. Tersedia: https://ieeexplore.ieee.org/abstract/document/10746144
 
 [8] R. Akl, D. Tummala, dan X. Li, "Indoor propagation modeling at 2.4 GHz for IEEE 802.11 networks," Department of Computer Science and Engineering, University of North Texas, Denton, TX, Tech. Rep., 2006. [Daring]. Tersedia: https://digital.library.unt.edu/ark:/67531/metadc30827/m2/1/high_res_d/Akl-2006-Indoor_Propagation_Modeling_at_2.4.pdf
 
 [9] P. Pandey dan R. Parasuraman, "Empirical analysis of bi-directional Wi-Fi network performance on mobile robots in indoor environments," arXiv:2110.03011, 2021. [Daring]. Tersedia: https://arxiv.org/abs/2110.03011
 
 [10] B. Porter, "Arduino-PS2X: Playstation 2 controller library for Arduino," repositori kode sumber madsci1016/Arduino-PS2X (diportasi untuk ESP32 oleh MyArduinoLib/Arduino-PS2X-ESP32, 2020). [Daring]. Tersedia: https://github.com/madsci1016/Arduino-PS2X
+
+[11] LimpSquid, "Robotic arm" (seri cetak 3D: bagian 1/3 *gripper*, thing:1748596; bagian 2/3 *turntable*, thing:1750025; bagian 3/3 *arm*, thing:1838120), Thingiverse, 2016. Lisensi CC BY-NC 4.0. [Daring]. Tersedia: https://www.thingiverse.com/thing:1838120
 
 ## Catatan draf (scaffolding — hapus saat perakitan, ticket 20)-archonx
 
@@ -33,6 +35,7 @@
   - `[8]` = Bab II (Dasar Teori), baris kemunculan kedelapan. Mendukung C5 (model rugi propagasi dalam ruang 2,4 GHz Akl et al. 2006). Sumber: S3 (Univ. of North Texas Tech. Rep.).
   - `[9]` = Bab II (Dasar Teori), baris kemunculan kesembilan. Mendukung C6 (karakterisasi empiris latensi dan *jitter* Wi-Fi 2,4 GHz teleoperasi robot Pandey & Parasuraman 2021). Sumber: S4 (arXiv:2110.03011).
   - `[10]` = Bab II (Dasar Teori), baris kemunculan kesepuluh. Mendukung C11 (arsitektur protokol stik PS2 berbasis *four-wire synchronous polling* yang mewajibkan mikrokontroler pengirim). Sumber: S8 (Bill Porter / madsci1016 upstream & MyArduinoLib ESP32 fork).
+  - `[11]` = Lampiran (Tabel 1 pembagian tugas dan Tabel 4 spesifikasi komponen), baris kemunculan kesebelas — atribusi lisensi CC BY-NC 4.0 untuk desain rujukan struktur mekanis cetak 3D 5-DOF (proyek Wonder Tiger; desainer asal: LimpSquid di Thingiverse). Sumber baru S14 (LimpSquid, "Robotic arm", Thingiverse, 2016, CC BY-NC 4.0).
 
 - **Audit klaim ledger:**
   - Klaim aktif naskah Full Paper: C1, C2, C3, C5, C6, C11, C14, C15, C16, C17, C18 (11 klaim eksternal terbukti, seluruhnya tersitasi pada `[1]`–`[10]`).
@@ -42,6 +45,7 @@
   - Klaim C9: Hipotesis awal sarung tangan (ditinggalkan).
   - Klaim C10: Data eksperimen mandiri tim (bukan sitasi eksternal).
   - Klaim C12, C13: Estimasi harga internal dan inventaris internal tim (bukan sitasi eksternal).
+  - `[11]` bukan klaim eksternal baru: atribusi kewajiban lisensi (CC BY-NC 4.0 mensyaratkan kredit desainer asal). Disarankan untuk archonx01: tambahkan S14 ke claim-ledger-archonx.md.
   - Sumber S5, S6, S7:
     - S7: Berstatus *UNVERIFIED* di ledger, tidak disitasi sesuai aturan integritas akademik.
     - S5 & S6: Sumber awal studi komparasi antarmuka (Zhou et al., Jia et al.). Karena naskah Full Paper beralih sepenuhnya ke intervensi kendali mode posisi-halus pada stik PS2 dan tidak lagi menyajikan perbandingan empiris sarung tangan vs stik, S5 dan S6 tidak disitasi dalam badan naskah. Rekomendasi untuk Load A / perakitan: Tandai S5 dan S6 sebagai *SUPERSEDED (antarmuka sarung tangan ditinggalkan)* dalam ledger saat perakitan akhir.
